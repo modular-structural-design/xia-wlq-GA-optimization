@@ -1,0 +1,88 @@
+
+
+ SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)                       
+ File: D:\desktop\xia\modular-structural-team\cases2\FEM_sap2000\MiC1.OUT       
+                                                                     
+                                                                       
+
+ D I S P L A C E M E N T   D E G R E E S   O F   F R E E D O M
+
+         (A) = Active DOF, equilibrium equation
+         (-) = Restrained DOF, reaction computed
+         (+) = Constrained DOF
+         (>) = External substructure DOF
+         ( ) = Null DOF
+
+  JOINTS              UX  UY  UZ  RX  RY  RZ
+  nodes0 TO  nodes3    -   -   -   -   -   -
+  nodes4 TO  nodes7    A   A   A   A   A   A
+  nodes8 TO nodes11    -   -   -   -   -   -
+ nodes12 TO nodes15    A   A   A   A   A   A
+ nodes16 TO nodes19    -   -   -   -   -   -
+ nodes20 TO nodes23    A   A   A   A   A   A
+ nodes24 TO nodes27    -   -   -   -   -   -
+ nodes28 TO nodes31    A   A   A   A   A   A
+ nodes32 TO nodes35    -   -   -   -   -   -
+ nodes36 TO nodes39    A   A   A   A   A   A
+ nodes40 TO nodes43    -   -   -   -   -   -
+ nodes44 TO nodes47    A   A   A   A   A   A
+ nodes48 TO nodes51    -   -   -   -   -   -
+ nodes52 TO nodes55    A   A   A   A   A   A
+ nodes56 TO nodes59    -   -   -   -   -   -
+ nodes60 TO nodes63    A   A   A   A   A   A
+ nodes64 TO nodes67    -   -   -   -   -   -
+ nodes68 TO nodes71    A   A   A   A   A   A
+ nodes72 TO nodes75    -   -   -   -   -   -
+ nodes76 TO nodes79    A   A   A   A   A   A
+ nodes80 TO nodes83    -   -   -   -   -   -
+ nodes84 TO nodes87    A   A   A   A   A   A
+ nodes88 TO nodes91    -   -   -   -   -   -
+ nodes92 TO nodes95    A   A   A   A   A   A
+ nodes96 TO nodes99    -   -   -   -   -   -
+
+  JOINTS              UX  UY  UZ  RX  RY  RZ
+ odes100 TO odes103    A   A   A   A   A   A
+ odes104 TO odes107    -   -   -   -   -   -
+ odes108 TO odes111    A   A   A   A   A   A
+ odes112 TO odes115    -   -   -   -   -   -
+ odes116 TO odes119    A   A   A   A   A   A
+ odes120 TO odes123    -   -   -   -   -   -
+ odes124 TO odes127    A   A   A   A   A   A
+ odes128 TO odes131    -   -   -   -   -   -
+ odes132 TO odes135    A   A   A   A   A   A
+ odes136 TO odes139    -   -   -   -   -   -
+ odes140 TO odes143    A   A   A   A   A   A
+ odes144 TO odes147    -   -   -   -   -   -
+ odes148 TO odes151    A   A   A   A   A   A
+ odes152 TO odes155    -   -   -   -   -   -
+ odes156 TO odes159    A   A   A   A   A   A
+ odes160 TO odes163    -   -   -   -   -   -
+ odes164 TO odes167    A   A   A   A   A   A
+ odes168 TO odes171    -   -   -   -   -   -
+ odes172 TO odes175    A   A   A   A   A   A
+ odes176 TO odes179    -   -   -   -   -   -
+ odes180 TO odes183    A   A   A   A   A   A
+ odes184 TO odes187    -   -   -   -   -   -
+ odes188 TO odes191    A   A   A   A   A   A
+ odes192 TO odes195    -   -   -   -   -   -
+ odes196 TO odes199    A   A   A   A   A   A
+ odes200 TO odes203    -   -   -   -   -   -
+ odes204 TO odes207    A   A   A   A   A   A
+ odes208 TO odes211    -   -   -   -   -   -
+ odes212 TO odes215    A   A   A   A   A   A
+ odes216 TO odes219    -   -   -   -   -   -
+ odes220 TO odes223    A   A   A   A   A   A
+ odes224 TO odes227    -   -   -   -   -   -
+ odes228 TO odes695    A   A   A   A   A   A
+ odes696 TO odes699    -   -   -   -   -   -
+ odes700 TO odes703    A   A   A   A   A   A
+ odes704 TO odes707    -   -   -   -   -   -
+ odes708 TO odes711    A   A   A   A   A   A
+ odes712 TO odes715    -   -   -   -   -   -
+ odes716 TO odes719    A   A   A   A   A   A
+ odes720 TO odes723    -   -   -   -   -   -
+ odes724 TO odes727    A   A   A   A   A   A
+ odes728 TO odes731    -   -   -   -   -   -
+ odes732 TO odes735    A   A   A   A   A   A
+ odes736 TO odes739    -   -   -   -   -   -
+ odes740 TO odes839    A   A   A   A   A   A

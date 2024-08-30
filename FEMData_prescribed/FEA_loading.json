@@ -1,0 +1,76 @@
+{
+  "software": "SAP2000",
+  "load_patterns": {
+    "DEAD": 1,
+    "LIVE": 3,
+    "EARTHQUAKE": 5
+  },
+  "plane_load": {
+    "0": {
+      "type": "DEAD",
+      "direction": 9,
+      "value": -0.0012
+    },
+    "1": {
+      "type": "LIVE",
+      "direction": 9,
+      "value": -0.00075
+    },
+    "2": {
+      "type": "DEAD",
+      "direction": 9,
+      "value": -0.0006
+    }
+  },
+  "frame_load": {
+    "0": {
+      "type": "DEAD",
+      "direction": 9,
+      "value": -4.2
+    }
+  },
+  "earthquake_load": {
+    "0": {
+      "case_name": "EX",
+      "direction": 1,
+      "eccen": 0.05,
+      "PeriodFlag": 2,
+      "UserT": 0,
+      "AlphaMax": 0.04,
+      "SI": 1,
+      "DampRatio": 0.05,
+      "Tg": 0.35,
+      "TDF": 1,
+      "EnhanceFactor": 1
+    },
+    "1": {
+      "case_name": "EY",
+      "direction": 2,
+      "eccen": 0.05,
+      "PeriodFlag": 2,
+      "UserT": 0,
+      "AlphaMax": 0.04,
+      "SI": 1,
+      "DampRatio": 0.05,
+      "Tg": 0.35,
+      "TDF": 1,
+      "EnhanceFactor": 1
+    }
+  },
+  "load_combinations": {
+    "comb1": [
+        [
+            "DEAD",
+            "LIVE",
+            "EX",
+            "EY"
+        ],
+        [
+            1.3,
+            1.5,
+            1.0,
+            1.0
+        ]
+    ]
+}
+}

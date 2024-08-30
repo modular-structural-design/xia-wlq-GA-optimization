@@ -1,0 +1,39 @@
+{
+    "maximum_G11": {
+        "value": 1.4598296942543278,
+        "frames": [
+            "frame433"
+        ]
+    },
+    "maximum_G12": {
+        "value": 1.7892066953964134,
+        "frames": [
+            "frame433"
+        ]
+    },
+    "maximum_G13": {
+        "value": -0.6202338352202302,
+        "frames": [
+            "frame586"
+        ]
+    },
+    "maximum_X_story_drift": {
+        "value": -0.8480106725305594,
+        "node": "nodes624"
+    },
+    "maximum_Y_story_drift": {
+        "value": -0.6962283904932914,
+        "node": "nodes461"
+    },
+    "maximum_X_abs_story_drift": {
+        "value": -0.6570370144537234,
+        "node": "nodes678"
+    },
+    "maximum_Y_abs_story_drift": {
+        "value": -0.6058776289298331,
+        "node": "nodes367"
+    },
+    "total_weight": {
+        "value": 470.15077079760266
+    }
+}

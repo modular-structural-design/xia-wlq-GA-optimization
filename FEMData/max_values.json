@@ -1,0 +1,39 @@
+{
+    "maximum_G11": {
+        "value": 2.9383699674129953,
+        "frames": [
+            "frame385"
+        ]
+    },
+    "maximum_G12": {
+        "value": 3.4325319136393304,
+        "frames": [
+            "frame433"
+        ]
+    },
+    "maximum_G13": {
+        "value": -0.36192139268085366,
+        "frames": [
+            "frame563"
+        ]
+    },
+    "maximum_X_story_drift": {
+        "value": -0.9112989952078511,
+        "node": "nodes839"
+    },
+    "maximum_Y_story_drift": {
+        "value": -0.6477439256624028,
+        "node": "nodes741"
+    },
+    "maximum_X_abs_story_drift": {
+        "value": -0.8748932423779809,
+        "node": "nodes834"
+    },
+    "maximum_Y_abs_story_drift": {
+        "value": -0.7039331100398187,
+        "node": "nodes508"
+    },
+    "total_weight": {
+        "value": 368.1457329599963
+    }
+}

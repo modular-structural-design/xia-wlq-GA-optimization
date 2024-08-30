@@ -1,0 +1,470 @@
+File D:\desktop\xia\modular-structural-team\D.$2k was saved on m/d/yy at h:mm:ss
+ 
+TABLE:  "ACTIVE DEGREES OF FREEDOM"
+   UX=Yes   UY=Yes   UZ=Yes   RX=Yes   RY=Yes   RZ=Yes
+ 
+TABLE:  "ANALYSIS OPTIONS"
+   Solver=Advanced   SolverProc=Auto   Force32Bit=No   StiffCase=None   GeomMod=None   HingeOpt="In Elements"   NumAThreads=0   MaxFileSize=0   NumDThreads=0   NumRThreads=0   UseMMFiles="Program Determined"   AllowDiff=No
+ 
+TABLE:  "AREA SECTION PROPERTIES"
+   Section=Plane0   Material=4000Psi   MatAngle=0   AreaType=Shell   Type=Shell-Thin   DrillDOF=Yes   Thickness=0   BendThick=0   Color=Cyan   F11Mod=1   F22Mod=1   F12Mod=1   M11Mod=1   M22Mod=1   M12Mod=1   V13Mod=1   V23Mod=1   MMod=1   WMod=1
+ 
+TABLE:  "AREA SECTION PROPERTY DESIGN PARAMETERS"
+   Section=Plane0   RebarMat=None   RebarOpt=Default
+ 
+TABLE:  "AREA SECTION PROPERTY - TIME DEPENDENT"
+   Section=Plane0   TypeSize=Auto   AutoSFSize=1
+ 
+TABLE:  "AUTO SEISMIC - CHINESE 2010"
+   LoadPat=EX   Dir=X   PercentEcc=0.05   PeriodCalc="Prog Calc"   UserZ=No   AlphaMax=0.04   SI="6 (0.05g)"   DampRatio=0.05   Tg=0.35   PTDF=1   EnhanceFact=1
+   LoadPat=EY   Dir=Y   PercentEcc=0.05   PeriodCalc="Prog Calc"   UserZ=No   AlphaMax=0.04   SI="6 (0.05g)"   DampRatio=0.05   Tg=0.35   PTDF=1   EnhanceFact=1
+ 
+TABLE:  "AUTO WAVE 3 - WAVE CHARACTERISTICS - GENERAL"
+   WaveChar=Default   WaveType="From Theory"   KinFactor=1   SWaterDepth=1800   WaveHeight=720   WavePeriod=12   WaveTheory=Linear
+ 
+TABLE:  "CASE - MODAL 1 - GENERAL"
+   Case=MODAL   ModeType=Eigen   MaxNumModes=12   MinNumModes=1   EigenShift=0   EigenCutoff=0   EigenTol=1E-09   AutoShift=Yes
+ 
+TABLE:  "CASE - STATIC 1 - LOAD ASSIGNMENTS"
+   Case=DEAD   LoadType="Load pattern"   LoadName=DEAD   LoadSF=1
+   Case=LIVE   LoadType="Load pattern"   LoadName=LIVE   LoadSF=1
+   Case=EARTHQUAKE   LoadType="Load pattern"   LoadName=EARTHQUAKE   LoadSF=1
+   Case=EX   LoadType="Load pattern"   LoadName=EX   LoadSF=1
+   Case=EY   LoadType="Load pattern"   LoadName=EY   LoadSF=1
+ 
+TABLE:  "COMBINATION DEFINITIONS"
+   ComboName=comb1   ComboType="Linear Add"   AutoDesign=No   CaseName=DEAD   ScaleFactor=1.3   SteelDesign=None   ConcDesign=None   AlumDesign=None   ColdDesign=None   GUID=260316d4-4ad3-4a87-ba5e-f01ee7a34642
+   ComboName=comb1   CaseName=LIVE   ScaleFactor=1.5
+   ComboName=comb1   CaseName=EX   ScaleFactor=1
+   ComboName=comb1   CaseName=EY   ScaleFactor=1
+ 
+TABLE:  "COORDINATE SYSTEMS"
+ 
+TABLE:  "DATABASE DOCUMENTATION"
+ 
+TABLE:  "DATABASE FORMAT TYPES"
+   UnitsCurr=Yes   OverrideE=No
+ 
+TABLE:  "FRAME SECTION PROPERTIES 01 - GENERAL"
+   SectionName=Channel0   Material=Q345   Shape=Channel   t3=50   t2=25   tf=6   tw=5   FilletRadius=0   Area=490   TorsConst=4507.76333333333   I33=168963.333333333   I22=27653.4863945578   I23=0   AS2=250   AS3=300   S33=6758.53333333333 _
+        S22=1688.4994807892   Z33=8405   Z22=3024.5   R33=18.5694138101261   R22=7.51236890198463   EccV2=14.7160294408359   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel1   Material=Q345   Shape=Channel   t3=75   t2=40   tf=7   tw=5   FilletRadius=0   Area=865   TorsConst=10548.6633333333   I33=744222.083333333   I22=135773.181599229   I23=0   AS2=375   AS3=560   S33=19845.9222222222 _
+        S22=5188.01997055034   Z33=23691.25   Z22=9276.33928571429   R33=29.3321044365108   R22=12.5284961476489   EccV2=26.5518176350033   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel10   Material=Q345   Shape=Channel   t3=250   t2=90   tf=13   tw=9   FilletRadius=0   Area=4356   TorsConst=172878.57   I33=41321388   I22=3369458.08264463   I23=0   AS2=2250   AS3=2340   S33=330571.104 _
+        S22=52859.3838973162   Z33=390186   Z22=95397.264   R33=97.3965368965911   R22=27.8122480081428   EccV2=53.961893676122   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel11   Material=Q345   Shape=Channel   t3=250   t2=90   tf=14.5   tw=11   FilletRadius=0   Area=5041   TorsConst=259327.097083333   I33=46127915.0833333   I22=3750088.37732262   I23=0   AS2=2750   AS3=2610 _
+        S33=369023.320666667   S22=58550.5769671131   Z33=441640.25   Z22=105408.819   R33=95.6584994593392   R22=27.274851998533   EccV2=51.4394464544483   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel12   Material=Q345   Shape=Channel   t3=300   t2=90   tf=12   tw=9   FilletRadius=0   Area=4644   TorsConst=160661.07   I33=60584112   I22=3369827.93023256   I23=0   AS2=2700   AS3=2160   S33=403894.08 _
+        S22=50550.3579277865   Z33=482436   Z22=90405.72   R33=114.217662463406   R22=26.9375291356304   EccV2=48.7788098328409   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel13   Material=Q345   Shape=Channel   t3=300   t2=90   tf=15.5   tw=10   FilletRadius=0   Area=5480   TorsConst=286756.740416667   I33=72732606.6666667   I22=4096936.73965937   I23=0   AS2=3000   AS3=2790 _
+        S33=484884.044444444   S22=63385.6954639563   Z33=577780   Z22=113974.666666667   R33=115.205787525275   R22=27.3425710818953   EccV2=51.4133897665701   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel14   Material=Q345   Shape=Channel   t3=300   t2=90   tf=16   tw=12   FilletRadius=0   Area=6096   TorsConst=368248.32   I33=77382592   I22=4293553.88976378   I23=0   AS2=3600   AS3=2880   S33=515883.946666667 _
+        S22=65475.6657060519   Z33=624432   Z22=117928.32   R33=112.667629559941   R22=26.539087110266   EccV2=47.6930259766137   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel15   Material=Q345   Shape=Channel   t3=380   t2=100   tf=16   tw=10.5   FilletRadius=0   Area=6854   TorsConst=377273.483541667   I33=142941234.666667   I22=6116573.18705622   I23=0   AS2=3990   AS3=3200 _
+        S33=752322.287719298   S22=82816.3298195206   Z33=900298   Z22=148277.371052632   R33=144.413141144025   R22=29.8732200702316   EccV2=54.0768733529529   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel16   Material=Q345   Shape=Channel   t3=380   t2=100   tf=16.5   tw=13   FilletRadius=0   Area=7811   TorsConst=516466.430416667   I33=154347724.916667   I22=6419803.27155081   I23=0   AS2=4940   AS3=3300 _
+        S33=812356.446929825   S22=85458.28341373   Z33=991104.25   Z22=154182.209868421   R33=140.571344048012   R22=28.6686696960629   EccV2=49.1000925879292   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel17   Material=Q345   Shape=Channel   t3=380   t2=100   tf=20   tw=13   FilletRadius=0   Area=8420   TorsConst=709128.856666667   I33=172312666.666667   I22=7368857.20110847   I23=0   AS2=4940   AS3=4000 _
+        S33=906908.771929824   S22=101172.041080329   Z33=1095700   Z22=182087.631578947   R33=143.054840017992   R22=29.5831233607965   EccV2=53.3823529046873   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel2   Material=Q345   Shape=Channel   t3=100   t2=50   tf=7.5   tw=5   FilletRadius=0   Area=1175   TorsConst=16144.0104166667   I33=1863697.91666667   I22=294469.193262411   I23=0   AS2=500   AS3=750 _
+        S33=37273.9583333333   S22=8886.06875334403   Z33=43718.75   Z22=15927.0833333333   R33=39.8261959836089   R22=15.8307321173806   EccV2=33.7300124985061   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel3   Material=Q345   Shape=Channel   t3=125   t2=65   tf=8   tw=6   FilletRadius=0   Area=1694   TorsConst=28042.1866666667   I33=4212201.16666667   I22=717543.802439984   I23=0   AS2=750   AS3=1040 _
+        S33=67395.2186666667   S22=16349.0504295117   Z33=78661.5   Z22=29509.9375   R33=49.8652325844422   R22=20.5810489628409   EccV2=43.0372894394665   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel4   Material=Q345   Shape=Channel   t3=150   t2=75   tf=10   tw=6.5   FilletRadius=0   Area=2345   TorsConst=57325.5535416667   I33=8552541.66666667   I22=1340154.14201315   I23=0   AS2=975   AS3=1500 _
+        S33=114033.888888889   S22=26888.2193129276   Z33=132462.5   Z22=48140.9375   R33=60.3915499344286   R22=23.9059470347933   EccV2=51.3425480787584   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel5   Material=Q345   Shape=Channel   t3=150   t2=75   tf=12.5   tw=9   FilletRadius=0   Area=3000   TorsConst=116399.53375   I33=10351562.5   I22=1652203.125   I23=0   AS2=1350   AS3=1875   S33=138020.833333333 _
+        S22=33126.8796992481   Z33=164062.5   Z22=59625   R33=58.7411340827987   R22=23.4677305038216   EccV2=48.877358490566   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel6   Material=Q345   Shape=Channel   t3=180   t2=75   tf=10.5   tw=7   FilletRadius=0   Area=2688   TorsConst=70450.91375   I33=13671819   I22=1496709.59375   I23=0   AS2=1260   AS3=1575   S33=151909.1 _
+        S22=29018.3017267495   Z33=177723   Z22=52626   R33=71.3178952823203   R22=23.5968558248278   EccV2=48.0546510318506   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel7   Material=Q345   Shape=Channel   t3=200   t2=80   tf=11   tw=7.5   FilletRadius=0   Area=3095   TorsConst=89204.2435416667   I33=19259831.6666667   I22=1942508.08175148   I23=0   AS2=1500   AS3=1760 _
+        S33=192598.316666667   S22=34914.5222345226   Z33=225727.5   Z22=63341.1931818182   R33=78.8852700912668   R22=25.052501135952   EccV2=50.1961846373531   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel8   Material=Q345   Shape=Channel   t3=200   t2=90   tf=13.5   tw=8   FilletRadius=0   Area=3814   TorsConst=162337.347083333   I33=24618933.8333333   I22=3129908.39678378   I23=0   AS2=1600   AS3=2430 _
+        S33=246189.338333333   S22=52271.5835661386   Z33=286455.5   Z22=93683.2962962963   R33=80.3423029332759   R22=28.6467573387663   EccV2=61.312124987576   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=Channel9   Material=Q345   Shape=Channel   t3=230   t2=80   tf=12   tw=8   FilletRadius=0   Area=3568   TorsConst=117748.053333333   I33=28662437.3333333   I22=2182103.05530643   I23=0   AS2=1840   AS3=1920 _
+        S33=249238.585507246   S22=38534.1290254461   Z33=294152   Z22=69554.3652173913   R33=89.6280889000787   R22=24.7300620382457   EccV2=48.0234494848543   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1 _
+        I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type0   Material=Q345   Shape="I/Wide Flange"   t3=150   t2=100   tf=7   tw=5   t2b=100   tfb=7   FilletRadius=0   Area=2080   TorsConst=27393.6633333333   I33=8210973.33333333   I22=1168083.33333333   I23=0   AS2=750 _
+        AS3=1166.66666666667   S33=109479.644444444   S22=23361.6666666667   Z33=123220   Z22=35850   R33=62.8297965406011   R22=23.6976481035782   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1 _
+        MMod=1   WMod=1
+   SectionName=I-type1   Material=Q345   Shape="I/Wide Flange"   t3=150   t2=150   tf=10   tw=7   t2b=150   tfb=10   FilletRadius=0   Area=3910   TorsConst=110159.123333333   I33=16006583.3333333   I22=5628715.83333333   I23=0   AS2=1050 _
+        AS3=2500   S33=213421.111111111   S22=75049.5444444444   Z33=239575   Z22=114092.5   R33=63.9824610984779   R22=37.9416560898067   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type10   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=200   tf=9   tw=6   t2b=200   tfb=9   FilletRadius=0   Area=5292   TorsConst=114476.22   I33=87450084   I22=12005076   I23=0   AS2=1800   AS3=3000   S33=583000.56 _
+        S22=120050.76   Z33=643086   Z22=182538   R33=128.549442564616   R22=47.6291179827907   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type11   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=200   tf=15   tw=8   t2b=200   tfb=15   FilletRadius=0   Area=8160   TorsConst=473957.34   I33=135072000   I22=20011520   I23=0   AS2=2400   AS3=5000   S33=900480 _
+        S22=200115.2   Z33=1000800   Z22=304320   R33=128.658234001834   R22=49.5216332208737   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type2   Material=Q345   Shape="I/Wide Flange"   t3=200   t2=150   tf=6   tw=4.5   t2b=150   tfb=6   FilletRadius=0   Area=2646   TorsConst=26680.066875   I33=19433352   I22=3376427.625   I23=0   AS2=900   AS3=1500 _
+        S33=194333.52   S22=45019.035   Z33=214362   Z22=68451.75   R33=85.6996283764106   R22=35.721838487093   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type3   Material=Q345   Shape="I/Wide Flange"   t3=200   t2=150   tf=12   tw=8   t2b=150   tfb=12   FilletRadius=0   Area=5008   TorsConst=193268.053333333   I33=35487317.3333333   I22=6757509.33333333   I23=0   AS2=1600 _
+        AS3=3000   S33=354873.173333333   S22=90100.1244444444   Z33=400352   Z22=137816   R33=84.1791284440609   R22=36.7334032999649   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type4   Material=Q345   Shape="I/Wide Flange"   t3=200   t2=200   tf=6   tw=4.5   t2b=200   tfb=6   FilletRadius=0   Area=3246   TorsConst=33880.066875   I33=25080552   I22=8001427.625   I23=0   AS2=900   AS3=2000 _
+        S33=250805.52   S22=80014.27625   Z33=272562   Z22=120951.75   R33=87.9010954869185   R22=49.6488830809834   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type5   Material=Q345   Shape="I/Wide Flange"   t3=250   t2=125   tf=9   tw=6   t2b=125   tfb=9   FilletRadius=0   Area=3642   TorsConst=74426.22   I33=38929334   I22=2933863.5   I23=0   AS2=1500   AS3=1875   S33=311434.672 _
+        S22=46941.816   Z33=351861   Z22=72400.5   R33=103.387614837089   R22=28.3824565277611   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type6   Material=Q345   Shape="I/Wide Flange"   t3=250   t2=125   tf=9   tw=6   t2b=125   tfb=9   FilletRadius=0   Area=3642   TorsConst=74426.22   I33=38929334   I22=2933863.5   I23=0   AS2=1500   AS3=1875   S33=311434.672 _
+        S22=46941.816   Z33=351861   Z22=72400.5   R33=103.387614837089   R22=28.3824565277611   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type7   Material=Q345   Shape="I/Wide Flange"   t3=250   t2=250   tf=14   tw=9   t2b=250   tfb=14   FilletRadius=0   Area=8998   TorsConst=493766.803333333   I33=105788119.333333   I22=36471819.8333333   I23=0   AS2=2250 _
+        AS3=5833.33333333333   S33=846304.954666667   S22=291774.558666667   Z33=936889   Z22=441995.5   R33=108.429000338451   R22=63.6657299090449   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1 _
+        MMod=1   WMod=1
+   SectionName=I-type8   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=150   tf=9   tw=6   t2b=150   tfb=9   FilletRadius=0   Area=4392   TorsConst=90176.22   I33=68390784   I22=5067576   I23=0   AS2=1800   AS3=2250   S33=455938.56 _
+        S22=67567.68   Z33=512136   Z22=103788   R33=124.78650620619   R22=33.9679212218108   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=I-type9   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=150   tf=15   tw=8   t2b=150   tfb=15   FilletRadius=0   Area=6660   TorsConst=361457.34   I33=104584500   I22=8449020   I23=0   AS2=2400   AS3=3750   S33=697230 _
+        S22=112653.6   Z33=787050   Z22=173070   R33=125.313121333635   R22=35.617714997198   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect0   Material=Q345   Shape=Box/Tube   t3=80   t2=80   tf=6.3   tw=6.3   FilletRadius=0   Area=1857.24   TorsConst=2521987.9839   I33=1693610.9652   I22=1693610.9652   I23=0   AS2=1008   AS3=1008   S33=42340.27413 _
+        S22=42340.27413   Z33=51454.494   Z22=51454.494   R33=30.197626838324   R22=30.197626838324   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect1   Material=Q345   Shape=Box/Tube   t3=100   t2=100   tf=5   tw=5   FilletRadius=0   Area=1900   TorsConst=4286875   I33=2865833.33333333   I22=2865833.33333333   I23=0   AS2=1000   AS3=1000   S33=57316.6666666667 _
+        S22=57316.6666666667   Z33=67750   Z22=67750   R33=38.8372673257701   R22=38.8372673257701   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect10   Material=Q345   Shape=Box/Tube   t3=200   t2=200   tf=10   tw=10   FilletRadius=0   Area=7600   TorsConst=68590000   I33=45853333.3333333   I22=45853333.3333333   I23=0   AS2=4000   AS3=4000   S33=458533.333333333 _
+        S22=458533.333333333   Z33=542000   Z22=542000   R33=77.6745346515403   R22=77.6745346515403   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect11   Material=Q345   Shape=Box/Tube   t3=250   t2=250   tf=10   tw=10   FilletRadius=0   Area=9600   TorsConst=138240000   I33=92320000   I22=92320000   I23=0   AS2=5000   AS3=5000   S33=738560   S22=738560   Z33=864500 _
+        Z22=864500   R33=98.0646045557043   R22=98.0646045557043   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect12   Material=Q345   Shape=Box/Tube   t3=300   t2=150   tf=8   tw=8   FilletRadius=0   Area=6944   TorsConst=63382978.6543779   I33=81712938.6666667   I22=27430538.6666667   I23=0   AS2=4800   AS3=2400 _
+        S33=544752.924444444   S22=365740.515555556   Z33=673024   Z22=412624   R33=108.477722517769   R22=62.851017366663   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect13   Material=Q345   Shape=Box/Tube   t3=300   t2=150   tf=10   tw=10   FilletRadius=0   Area=8600   TorsConst=76667906.9767442   I33=99686666.6666667   I22=33111666.6666667   I23=0   AS2=6000   AS3=3000 _
+        S33=664577.777777778   S22=441488.888888889   Z33=827000   Z22=504500   R33=107.663702649579   R22=62.0499298827131   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect14   Material=Q345   Shape=Box/Tube   t3=300   t2=200   tf=8   tw=8   FilletRadius=0   Area=7744   TorsConst=103906515.570248   I33=98770005.3333333   I22=52568405.3333333   I23=0   AS2=4800   AS3=3200 _
+        S33=658466.702222222   S22=525684.053333333   Z33=789824   Z22=596224   R33=112.935340724562   R22=82.390991510563   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect15   Material=Q345   Shape=Box/Tube   t3=300   t2=200   tf=10   tw=10   FilletRadius=0   Area=9600   TorsConst=126500416.666667   I33=120720000   I22=63920000   I23=0   AS2=6000   AS3=4000   S33=804800   S22=639200 _
+        Z33=972000   Z22=732000   R33=112.138307460029   R22=81.598611099291   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect16   Material=Q345   Shape=Box/Tube   t3=300   t2=300   tf=10   tw=10   FilletRadius=0   Area=11600   TorsConst=243890000   I33=162786666.666667   I22=162786666.666667   I23=0   AS2=6000   AS3=6000   S33=1085244.44444444 _
+        S22=1085244.44444444   Z33=1262000   Z22=1262000   R33=118.462370959446   R22=118.462370959446   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect17   Material=Q345   Shape=Box/Tube   t3=300   t2=300   tf=12   tw=12   FilletRadius=0   Area=13824   TorsConst=286654464   I33=191434752   I22=191434752   I23=0   AS2=7200   AS3=7200   S33=1276231.68   S22=1276231.68 _
+        Z33=1493856   Z22=1493856   R33=117.677525466845   R22=117.677525466845   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect2   Material=Q345   Shape=Box/Tube   t3=100   t2=100   tf=8   tw=8   FilletRadius=0   Area=2944   TorsConst=6229504   I33=4184405.33333333   I22=4184405.33333333   I23=0   AS2=1600   AS3=1600   S33=83688.1066666667 _
+        S22=83688.1066666667   Z33=101824   Z22=101824   R33=37.7005747082632   R22=37.7005747082632   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect3   Material=Q345   Shape=Box/Tube   t3=120   t2=120   tf=8   tw=8   FilletRadius=0   Area=3584   TorsConst=11239424   I33=7531178.66666667   I22=7531178.66666667   I23=0   AS2=1920   AS3=1920   S33=125519.644444444 _
+        S22=125519.644444444   Z33=150784   Z22=150784   R33=45.8403025004562   R22=45.8403025004562   Color=Gray8Dark   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect4   Material=Q345   Shape=Box/Tube   t3=120   t2=120   tf=10   tw=10   FilletRadius=0   Area=4400   TorsConst=13310000   I33=8946666.66666667   I22=8946666.66666667   I23=0   AS2=2400   AS3=2400   S33=149111.111111111 _
+        S22=149111.111111111   Z33=182000   Z22=182000   R33=45.0924975282289   R22=45.0924975282289   Color=Blue   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect5   Material=Q345   Shape=Box/Tube   t3=150   t2=150   tf=8   tw=8   FilletRadius=0   Area=4544   TorsConst=22906304   I33=15319338.6666667   I22=15319338.6666667   I23=0   AS2=2400   AS3=2400   S33=204257.848888889 _
+        S22=204257.848888889   Z33=242224   Z22=242224   R33=58.0631839751605   R22=58.0631839751605   Color=Green   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect6   Material=Q345   Shape=Box/Tube   t3=150   t2=150   tf=10   tw=10   FilletRadius=0   Area=5600   TorsConst=27440000   I33=18386666.6666667   I22=18386666.6666667   I23=0   AS2=3000   AS3=3000   S33=245155.555555556 _
+        S22=245155.555555556   Z33=294500   Z22=294500   R33=57.3003781255703   R22=57.3003781255703   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect7   Material=Q345   Shape=Box/Tube   t3=180   t2=180   tf=10   tw=10   FilletRadius=0   Area=6800   TorsConst=49130000   I33=32866666.6666667   I22=32866666.6666667   I23=0   AS2=3600   AS3=3600   S33=365185.185185185 _
+        S22=365185.185185185   Z33=434000   Z22=434000   R33=69.5221787153807   R22=69.5221787153807   Color=Red   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect8   Material=Q345   Shape=Box/Tube   t3=180   t2=180   tf=12.5   tw=12.5   FilletRadius=0   Area=8375   TorsConst=58742773.4375   I33=39379947.9166667   I22=39379947.9166667   I23=0   AS2=4500   AS3=4500 _
+        S33=437554.976851852   S22=437554.976851852   Z33=527031.25   Z22=527031.25   R33=68.571738590569   R22=68.571738590569   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+   SectionName=Rect9   Material=Q345   Shape=Box/Tube   t3=200   t2=200   tf=8   tw=8   FilletRadius=0   Area=6144   TorsConst=56623104   I33=37814272   I22=37814272   I23=0   AS2=3200   AS3=3200   S33=378142.72   S22=378142.72   Z33=442624 _
+        Z22=442624   R33=78.4516836445635   R22=78.4516836445635   Color=Yellow   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1
+ 
+TABLE:  "FRAME SECTION PROPERTIES 13 - TIME DEPENDENT"
+   SectionName=Channel0   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel1   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel10   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel11   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel12   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel13   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel14   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel15   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel16   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel17   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel2   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel3   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel4   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel5   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel6   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel7   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel8   TypeSize=Auto   AutoSFSize=1
+   SectionName=Channel9   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type0   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type1   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type10   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type11   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type2   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type3   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type4   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type5   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type6   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type7   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type8   TypeSize=Auto   AutoSFSize=1
+   SectionName=I-type9   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect0   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect1   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect10   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect11   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect12   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect13   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect14   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect15   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect16   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect17   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect2   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect3   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect4   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect5   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect6   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect7   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect8   TypeSize=Auto   AutoSFSize=1
+   SectionName=Rect9   TypeSize=Auto   AutoSFSize=1
+ 
+TABLE:  "FUNCTION - PLOT FUNCTIONS"
+   PlotFunc="Input Energy"   Type=Energy   Component=Input   Mode=All
+ 
+TABLE:  "FUNCTION - POWER SPECTRAL DENSITY - USER"
+   Name=UNIFPSD   Frequency=0   Value=1
+   Name=UNIFPSD   Frequency=1   Value=1
+ 
+TABLE:  "FUNCTION - RESPONSE SPECTRUM - USER"
+   Name=UNIFRS   Period=0   Accel=1   FuncDamp=0.05
+   Name=UNIFRS   Period=1   Accel=1
+ 
+TABLE:  "FUNCTION - STEADY STATE - USER"
+   Name=UNIFSS   Frequency=0   Value=1
+   Name=UNIFSS   Frequency=1   Value=1
+ 
+TABLE:  "FUNCTION - TIME HISTORY - USER"
+   Name=RAMPTH   Time=0   Value=0
+   Name=RAMPTH   Time=1   Value=1
+   Name=RAMPTH   Time=4   Value=1
+   Name=UNIFTH   Time=0   Value=1
+   Name=UNIFTH   Time=1   Value=1
+ 
+TABLE:  "GROUPS 1 - DEFINITIONS"
+   GroupName=ALL   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Red
+ 
+TABLE:  "JOINT PATTERN DEFINITIONS"
+   Pattern=Default
+ 
+TABLE:  "LINK PROPERTY DEFINITIONS 01 - GENERAL"
+   Link=HOR1   LinkType="MultiLinear Elastic"   Mass=0   Weight=0   RotInert1=0   RotInert2=0   RotInert3=0   DefLength=1   DefArea=1   PDM2I=0   PDM2J=0   PDM3I=0   PDM3J=0   StiffLOpt="Effective from Zero"   StiffDOpt=Initial _
+        StiffDFact=1   Color=Blue
+   Link=VER1   LinkType="MultiLinear Elastic"   Mass=0   Weight=0   RotInert1=0   RotInert2=0   RotInert3=0   DefLength=1   DefArea=1   PDM2I=0   PDM2J=0   PDM3I=0   PDM3J=0   StiffLOpt="Effective from Zero"   StiffDOpt=Initial _
+        StiffDFact=1   Color=Green
+ 
+TABLE:  "LINK PROPERTY DEFINITIONS 03 - MULTILINEAR"
+   Link=HOR1   DOF=U1   Fixed=No   NonLinear=Yes   TransKE=980000   TransCE=0.05   Force=-1150000   Displ=-2.34
+   Link=HOR1   DOF=U1   Force=-1150000   Displ=-1.14
+   Link=HOR1   DOF=U1   Force=0   Displ=0
+   Link=HOR1   DOF=U1   Force=1070000   Displ=1.14
+   Link=HOR1   DOF=U1   Force=1070000   Displ=2.34
+   Link=HOR1   DOF=U2   Fixed=No   NonLinear=Yes   TransKE=120000   TransCE=0.05   DJ=2   Force=-331000   Displ=-5.42
+   Link=HOR1   DOF=U2   Force=-331000   Displ=-2.7
+   Link=HOR1   DOF=U2   Force=0   Displ=0
+   Link=HOR1   DOF=U2   Force=331000   Displ=2.7
+   Link=HOR1   DOF=U2   Force=331000   Displ=5.42
+   Link=HOR1   DOF=U3   Fixed=No   NonLinear=Yes   TransKE=120000   TransCE=0.05   DJ=0   Force=-331000   Displ=-5.42
+   Link=HOR1   DOF=U3   Force=-331000   Displ=-2.7
+   Link=HOR1   DOF=U3   Force=0   Displ=0
+   Link=HOR1   DOF=U3   Force=331000   Displ=2.7
+   Link=HOR1   DOF=U3   Force=331000   Displ=5.42
+   Link=HOR1   DOF=R1   Fixed=No   NonLinear=Yes   RotKE=2200000000   RotCE=0.05   Moment=-48000000   Rotation=-0.073
+   Link=HOR1   DOF=R1   Moment=-48000000   Rotation=-0.038
+   Link=HOR1   DOF=R1   Moment=-31500000   Rotation=-0.015
+   Link=HOR1   DOF=R1   Moment=0   Rotation=0
+   Link=HOR1   DOF=R1   Moment=31500000   Rotation=0.015
+   Link=HOR1   DOF=R1   Moment=48000000   Rotation=0.038
+   Link=HOR1   DOF=R1   Moment=48000000   Rotation=0.073
+   Link=HOR1   DOF=R2   Fixed=No   NonLinear=Yes   RotKE=3400000000   RotCE=0.05   Moment=-55000000   Rotation=-0.055
+   Link=HOR1   DOF=R2   Moment=-55000000   Rotation=-0.027
+   Link=HOR1   DOF=R2   Moment=-36800000   Rotation=-0.011
+   Link=HOR1   DOF=R2   Moment=0   Rotation=0
+   Link=HOR1   DOF=R2   Moment=36800000   Rotation=0.011
+   Link=HOR1   DOF=R2   Moment=53800000   Rotation=0.027
+   Link=HOR1   DOF=R2   Moment=54300000   Rotation=0.055
+   Link=HOR1   DOF=R3   Fixed=No   NonLinear=Yes   RotKE=3400000000   RotCE=0.05   Moment=-55000000   Rotation=-0.055
+   Link=HOR1   DOF=R3   Moment=-55000000   Rotation=-0.027
+   Link=HOR1   DOF=R3   Moment=-36800000   Rotation=-0.011
+   Link=HOR1   DOF=R3   Moment=0   Rotation=0
+   Link=HOR1   DOF=R3   Moment=36800000   Rotation=0.011
+   Link=HOR1   DOF=R3   Moment=53800000   Rotation=0.027
+   Link=HOR1   DOF=R3   Moment=54300000   Rotation=0.055
+   Link=VER1   DOF=U1   Fixed=No   NonLinear=Yes   TransKE=980000   TransCE=0.05   Force=-685000   Displ=-0.45
+   Link=VER1   DOF=U1   Force=-690000   Displ=-0.23
+   Link=VER1   DOF=U1   Force=0   Displ=0
+   Link=VER1   DOF=U1   Force=690000   Displ=0.23
+   Link=VER1   DOF=U1   Force=685000   Displ=0.45
+   Link=VER1   DOF=U2   Fixed=No   NonLinear=Yes   TransKE=120000   TransCE=0.05   DJ=2   Force=-624000   Displ=-0.23
+   Link=VER1   DOF=U2   Force=-624000   Displ=-0.11
+   Link=VER1   DOF=U2   Force=0   Displ=0
+   Link=VER1   DOF=U2   Force=630000   Displ=0.11
+   Link=VER1   DOF=U2   Force=630000   Displ=0.23
+   Link=VER1   DOF=U3   Fixed=No   NonLinear=Yes   TransKE=120000   TransCE=0.05   DJ=0   Force=-624000   Displ=-0.23
+   Link=VER1   DOF=U3   Force=-624000   Displ=-0.11
+   Link=VER1   DOF=U3   Force=0   Displ=0
+   Link=VER1   DOF=U3   Force=630000   Displ=0.11
+   Link=VER1   DOF=U3   Force=630000   Displ=0.23
+   Link=VER1   DOF=R1   Fixed=No   NonLinear=Yes   RotKE=2200000000   RotCE=0.05   Moment=-75000000   Rotation=-0.012
+   Link=VER1   DOF=R1   Moment=-75000000   Rotation=-0.0063
+   Link=VER1   DOF=R1   Moment=-48500000   Rotation=-0.0024
+   Link=VER1   DOF=R1   Moment=0   Rotation=0
+   Link=VER1   DOF=R1   Moment=49300000   Rotation=0.0024
+   Link=VER1   DOF=R1   Moment=75000000   Rotation=0.0063
+   Link=VER1   DOF=R1   Moment=75000000   Rotation=0.012
+   Link=VER1   DOF=R2   Fixed=No   NonLinear=Yes   RotKE=3400000000   RotCE=0.05   Moment=-129000000   Rotation=-0.022
+   Link=VER1   DOF=R2   Moment=-129000000   Rotation=-0.011
+   Link=VER1   DOF=R2   Moment=-85600000   Rotation=-0.0044
+   Link=VER1   DOF=R2   Moment=0   Rotation=0
+   Link=VER1   DOF=R2   Moment=85600000   Rotation=0.0041
+   Link=VER1   DOF=R2   Moment=129000000   Rotation=0.011
+   Link=VER1   DOF=R2   Moment=129000000   Rotation=0.0215
+   Link=VER1   DOF=R3   Fixed=No   NonLinear=Yes   RotKE=3400000000   RotCE=0.05   Moment=-34000000   Rotation=-0.006
+   Link=VER1   DOF=R3   Moment=-34000000   Rotation=-0.0032
+   Link=VER1   DOF=R3   Moment=-23100000   Rotation=-0.0014
+   Link=VER1   DOF=R3   Moment=0   Rotation=0
+   Link=VER1   DOF=R3   Moment=22200000   Rotation=0.0012
+   Link=VER1   DOF=R3   Moment=34000000   Rotation=0.0026
+   Link=VER1   DOF=R3   Moment=34000000   Rotation=0.0053
+ 
+TABLE:  "LOAD CASE DEFINITIONS"
+   Case=DEAD   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Dead   DesActOpt="Prog Det"   DesignAct=Non-Composite   AutoType=None   RunCase=Yes   GUID=dd16d0b6-c917-4dea-9fe3-1543884d7d9f
+   Case=MODAL   Type=LinModal   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Other   AutoType=None   RunCase=Yes   GUID=222f1bb5-8410-42d1-abf5-539b02ec0cdd
+   Case=LIVE   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Live   DesActOpt="Prog Det"   DesignAct="Short-Term Composite"   AutoType=None   RunCase=Yes   GUID=83a51066-acb5-4932-9485-37a3c2680e2d
+   Case=EARTHQUAKE   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Quake   DesActOpt="Prog Det"   DesignAct="Short-Term Composite"   AutoType=None   RunCase=Yes   GUID=af56efa6-1685-464b-94eb-5790d260cc2d
+   Case=EX   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Quake   DesActOpt="Prog Det"   DesignAct="Short-Term Composite"   AutoType=None   RunCase=Yes   GUID=598a3da9-3224-4b0c-a1ca-11f79e6022b2
+   Case=EY   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Quake   DesActOpt="Prog Det"   DesignAct="Short-Term Composite"   AutoType=None   RunCase=Yes   GUID=cefd312e-bef3-402f-851a-6d869554be29
+ 
+TABLE:  "LOAD PATTERN DEFINITIONS"
+   LoadPat=DEAD   DesignType=Dead   SelfWtMult=1   GUID=7fe85af4-c2a1-4cd4-9f1d-5c0573634ebc
+   LoadPat=LIVE   DesignType=Live   SelfWtMult=0   GUID=243458f5-74b9-4c6c-b9fb-7d8d634d63e2
+   LoadPat=EARTHQUAKE   DesignType=Quake   SelfWtMult=0   AutoLoad=None   GUID=a97b7065-acae-4123-8231-44395cd68051
+   LoadPat=EX   DesignType=Quake   SelfWtMult=0   AutoLoad=CHINESE2010   GUID=4c5e75b2-2bbc-4184-b844-f4bbacaad1b5
+   LoadPat=EY   DesignType=Quake   SelfWtMult=0   AutoLoad=CHINESE2010   GUID=85d29feb-692c-4750-b0a1-36e0c098b2bd
+ 
+TABLE:  "MASS SOURCE"
+   MassSource=MSSSRC1   Elements=Yes   Masses=Yes   Loads=No   IsDefault=Yes
+ 
+TABLE:  "MATERIAL PROPERTIES 01 - GENERAL"
+   Material=4000Psi   Type=Concrete   Grade="f'c 4000 psi"   SymType=Isotropic   TempDepend=No   Color=Yellow   GUID=4ba3063e-070e-4d6a-8a07-3f4599e2b0bb   Notes="Customary f'c 4000 psi 2024/8/20 19:13:49"
+   Material=A615Gr60   Type=Rebar   Grade="Grade 60"   SymType=Uniaxial   TempDepend=No   Color=Gray8Dark   GUID=f25d1dc4-ca3a-4216-a265-537286d22d40   Notes="ASTM A615 Grade 60 2024/8/20 19:13:49"
+   Material=A992Fy50   Type=Steel   Grade="Grade 50"   SymType=Isotropic   TempDepend=No   Color=Magenta   Notes="ASTM A992 Grade 50 2024/8/20 19:13:49"
+   Material=Q345   Type=Steel   SymType=Isotropic   TempDepend=No   Color=Blue
+ 
+TABLE:  "MATERIAL PROPERTIES 02 - BASIC MECHANICAL PROPERTIES"
+   Material=4000Psi   UnitWeight=8.680555556E-05   UnitMass=2.248332521E-07   E1=3604.9965   G12=1502.081875   U12=0.2   A1=5.5E-06
+   Material=A615Gr60   UnitWeight=0.000283564814814815   UnitMass=7.34455290352564E-07   E1=29000   A1=6.5E-06
+   Material=A992Fy50   UnitWeight=0.000283564814814815   UnitMass=7.34455290352564E-07   E1=29000   G12=11153.8461538462   U12=0.3   A1=6.5E-06
+   Material=Q345   UnitWeight=3.03079543570517E-06   UnitMass=7.85E-09   E1=206000   G12=79230.7692307692   U12=0.3   A1=1.2E-05
+ 
+TABLE:  "MATERIAL PROPERTIES 03A - STEEL DATA"
+   Material=A992Fy50   Fy=50   Fu=65   EffFy=55   EffFu=71.5   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.015   SMax=0.11   SRup=0.17   FinalSlope=-0.1   CoupModType="Von Mises"
+   Material=Q345   Fy=345   Fu=490   EffFy=380   EffFu=520   SSCurveOpt=Simple   SSHysType=Takeda   SHard=0.015   SMax=0.11   SRup=0.17   FinalSlope=-0.1   CoupModType="Von Mises"
+ 
+TABLE:  "MATERIAL PROPERTIES 03B - CONCRETE DATA"
+   Material=4000Psi   Fc=4   eFc=4   LtWtConc=No   SSCurveOpt=Mander   SSHysType=Takeda   SFc=0.00221914   SCap=0.005   FinalSlope=-0.1   FAngle=0   DAngle=0   CoupModType="Modified Darwin-Pecknold"
+ 
+TABLE:  "MATERIAL PROPERTIES 03E - REBAR DATA"
+   Material=A615Gr60   Fy=60   Fu=90   EffFy=66   EffFu=99   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.01   SCap=0.09   FinalSlope=-0.1   UseCTDef=No   CoupModType="Von Mises"
+ 
+TABLE:  "MATERIAL PROPERTIES 03J - COUPLED NONLINEAR VON MISES DATA"
+   Material=A615Gr60   YieldStress=66   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+   Material=A992Fy50   YieldStress=55   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+   Material=Q345   YieldStress=380   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+ 
+TABLE:  "MATERIAL PROPERTIES 06 - DAMPING PARAMETERS"
+   Material=4000Psi   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=A615Gr60   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=A992Fy50   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=Q345   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+ 
+TABLE:  "MATERIAL PROPERTIES 09 - ACCEPTANCE CRITERIA"
+   Material=4000Psi   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.003   LSComp=-0.006   CPComp=-0.015   IgnoreTens=Yes
+   Material=A615Gr60   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+   Material=A992Fy50   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+   Material=Q345   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+ 
+TABLE:  "OPTIONS - COLORS - DISPLAY"
+   DeviceType=Screen   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Red   Restraints=4259584   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark   GuideLines=Gray8Dark _
+        Highlight=Red   Selection=10504778   AreaFillBot=1409258   AreaFillTop=1409258   AreaFillSd=1409258   AreaEdge=1409258   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan   SolidEdge=DarkRed _
+        Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0
+   DeviceType=Printer   Points=Gray8Dark   LinesFrame=Black   LinesFrmDL=Gray4   LinesCable=Black   LinesTendon=Black   SpringLinks=Gray8Dark   Restraints=Gray8Dark   Releases=Gray4   Axes=Black   Text=Black   ShadowLines=Gray4 _
+        GuideLines=Gray4   Highlight=Black   Selection=Black   AreaFillBot=Gray4   AreaFillTop=Gray8Dark   AreaFillSd=Gray4   AreaEdge=Black   SolidF1=Gray1Light   SolidF2=Gray2   SolidF3=Gray3   SolidF4=Gray4   SolidF5=Gray5 _
+        SolidF6=Gray6   SolidEdge=Black   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+   DeviceType="Color Printer"   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Green   Restraints=Green   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark _
+        GuideLines=Gray8Dark   Highlight=Red   Selection=10504778   AreaFillBot=Red   AreaFillTop=16744703   AreaFillSd=Red   AreaEdge=DarkRed   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan _
+        SolidEdge=DarkRed   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+ 
+TABLE:  "OPTIONS - COLORS - OUTPUT"
+   DeviceType=Screen   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888   Contour12=Cyan _
+        Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0.5   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7   RatioVal3=0.9 _
+        RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+   DeviceType=Printer   Contour1=Black   Contour2=3158064   Contour3=4210752   Contour4=5263440   Contour5=6316128   Contour6=7368816   Contour7=Gray8Dark   Contour8=Gray7   Contour9=Gray6   Contour10=Gray5   Contour11=Gray4 _
+        Contour12=Gray3   Contour13=Gray2   Contour14=Gray1Light   Contour15=White   Transpare=0   Ratio1=Gray2   Ratio2=Gray4   Ratio3=Gray8Dark   Ratio4=4210752   Ratio5=Black   RatioNotD=Gray4   RatioNotC=Black   RatioVal1=0.5 _
+        RatioVal2=0.7   RatioVal3=0.9   RatioVal4=1   DFillPos=Gray8Dark   DFillNeg=Gray8Dark   DFillRPos=4210752   DFillRNeg=4210752
+   DeviceType="Color Printer"   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888 _
+        Contour12=Cyan   Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7 _
+        RatioVal3=0.9   RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+ 
+TABLE:  "PREFERENCES - ALUMINUM DESIGN - AA 2015"
+   THDesign=Envelopes   SRatioLimit=1   Provision=LRFD   LatFact=1.33333333333333   UseLatFact=No   Bridge=No   PhiTy=0.9   PhiTr=0.75   PhiC=0.9   PhiBo=0.9   PhiBr=0.75   PhiVo=0.9   PhiVr=0.75
+ 
+TABLE:  "PREFERENCES - COLD FORMED DESIGN - AISI-16"
+   THDesign=Envelopes   FrameType="Braced Frame"   SRatioLimit=1   SOMethod="General 2nd Order"   Provision=LRFD   LatFact=1.33333333333333   UseLatFact=No   PhiTy=0.9   PhiTr=0.75   PhiC=0.85   PhiB=0.9   PhiBPipe=0.95   PhiV=0.95
+ 
+TABLE:  "PREFERENCES - CONCRETE DESIGN - ACI 318-19"
+   THDesign=Envelopes   NumCurves=24   NumPoints=11   MinEccen=Yes   PatLLF=0.75   UFLimit=0.95   SeisCat=D   Rho=1   Sds=0.5   PhiT=0.9   PhiCTied=0.65   PhiCSpiral=0.75   PhiV=0.75   PhiVSeismic=0.6   PhiVJoint=0.85
+ 
+TABLE:  "PREFERENCES - DIMENSIONAL"
+   MergeTol=0.1   FineGrid=12   Nudge=12   SelectTol=3   SnapTol=12   SLineThick=2   PLineThick=4   MaxFont=8   MinFont=3   AutoZoom=10   ShrinkFact=70   TextFileLen=240
+ 
+TABLE:  "PREFERENCES - STEEL DESIGN - AISC 360-16"
+   THDesign=Envelopes   FrameType=SMF   PatLLF=0.75   SRatioLimit=0.95   MaxIter=1   SDC=D   SeisCode=No   SeisLoad=No   ImpFactor=1   SystemRho=1   SystemSds=0.5   SystemR=8   SystemCd=5.5   Omega0=3   Provision=LRFD _
+        AMethod="Direct Analysis"   SOMethod="General 2nd Order"   SRMethod="Tau-b Fixed"   NLCoeff=0.002   PhiB=0.9   PhiC=0.9   PhiTY=0.9   PhiTF=0.75   PhiV=0.9   PhiVRolledI=1   PhiVT=0.9   PlugWeld=Yes   HSSWelding=ERW   HSSReduceT=No _
+        CheckDefl=No   DLRat=120   SDLAndLLRat=120   LLRat=360   TotalRat=240   NetRat=240
+ 
+TABLE:  "PROGRAM CONTROL"
+   ProgramName=SAP2000   Version=23.3.0   CurrUnits="Kip, in, F"   SteelCode="AISC 360-16"   ConcCode="ACI 318-19"   AlumCode="AA 2015"   ColdCode=AISI-16   RegenHinge=Yes
+ 
+TABLE:  "PROJECT INFORMATION"
+   Item="Company Name"
+   Item="Client Name"
+   Item="Project Name"
+   Item="Project Number"
+   Item="Model Name"
+   Item="Model Description"
+   Item="Revision Number"
+   Item="Frame Type"
+   Item=Engineer
+   Item=Checker
+   Item=Supervisor
+   Item="Issue Code"
+   Item="Design Code"
+ 
+TABLE:  "REBAR SIZES"
+   RebarID=#2   Area=0.05   Diameter=0.25
+   RebarID=#3   Area=0.109999999403954   Diameter=0.375
+   RebarID=#4   Area=0.200000002980232   Diameter=0.5
+   RebarID=#5   Area=0.310000002384186   Diameter=0.625
+   RebarID=#6   Area=0.439999997615814   Diameter=0.75
+   RebarID=#7   Area=0.600000023841858   Diameter=0.875
+   RebarID=#8   Area=0.790000021457672   Diameter=1
+   RebarID=#9   Area=1   Diameter=1.12800002098083
+   RebarID=#10   Area=1.26999998092651   Diameter=1.26999998092651
+   RebarID=#11   Area=1.55999994277954   Diameter=1.4099999666214
+   RebarID=#14   Area=2.25   Diameter=1.692999958992
+   RebarID=#18   Area=4   Diameter=2.25699996948242
+   RebarID=10M   Area=0.155000314116478   Diameter=0.444881916046143
+   RebarID=15M   Area=0.310000628232956   Diameter=0.62992125749588
+   RebarID=20M   Area=0.465000957250595   Diameter=0.767716526985168
+   RebarID=25M   Area=0.775001585483551   Diameter=0.992126047611237
+   RebarID=30M   Area=1.08500218391418   Diameter=1.17716538906097
+   RebarID=35M   Area=1.5500031709671   Diameter=1.4055118560791
+   RebarID=45M   Area=2.3250048160553   Diameter=1.72047245502472
+   RebarID=55M   Area=3.87500786781311   Diameter=2.22047257423401
+   RebarID=6d   Area=0.0438650883734226   Diameter=0.236220479011536
+   RebarID=8d   Area=0.0779651552438736   Diameter=0.31496062874794
+   RebarID=10d   Area=0.121675245463848   Diameter=0.393700778484344
+   RebarID=12d   Area=0.175150364637375   Diameter=0.472440958023071
+   RebarID=14d   Area=0.238700494170189   Diameter=0.551181137561798
+   RebarID=16d   Area=0.31155064702034   Diameter=0.62992125749588
+   RebarID=20d   Area=0.486700981855392   Diameter=0.787401556968689
+   RebarID=25d   Area=0.761051535606384   Diameter=0.984251976013184
+   RebarID=26d   Area=0.823051691055298   Diameter=1.02362203598022
+   RebarID=28d   Area=0.954801976680756   Diameter=1.1023622751236
+   RebarID=N12   Area=0.175150364637375   Diameter=0.472440958023071
+   RebarID=N16   Area=0.31155064702034   Diameter=0.62992125749588
+   RebarID=N20   Area=0.486700981855392   Diameter=0.787401556968689
+   RebarID=N24   Area=0.7006014585495   Diameter=0.944881916046143
+   RebarID=N28   Area=0.954801976680756   Diameter=1.1023622751236
+   RebarID=N32   Area=1.24620258808136   Diameter=1.25984251499176
+   RebarID=N36   Area=1.58100318908691   Diameter=1.41732287406921
+ 
+END TABLE DATA

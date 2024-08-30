@@ -1,0 +1,24 @@
+{
+  "file_paths": {
+    "BuildingData": "BuildingData",
+    "sap_dirpath": "D:\\sap200023\\SAP2000.exe",
+    "sap_dirpath_xy": "C:\\Program Files\\Computers and Structures\\SAP2000\\SAP2000.exe",
+    "Layout_Resulst": "Layout_Results",
+    "FEMData": "FEMData",
+    "FEMData_prescribed": "FEMData_prescribed",
+    "FEM_analysis_file": "FEM_sap2000",
+    "Resulst": "Results",
+    "DrawingResults": "draw"
+  },
+  "file_names": {
+    "building_data": "data_case1.json",
+    "mic_types": "mic_types.json",
+    "FEM_basic_data": "basic_structure_data.json",
+    "mic_structure_data": "mic_structure_data.json",
+    "mic_structure_data2": "mic_structure_data2.json",
+    "FEA_loading": "FEA_loading.json",
+    "mic_FEM_data": "mic_FEM_data.json",
+    "FEA_semantics": "FEA_semantic_lists.json",
+    "mic_results": "mic_results.json"
+  }
+}

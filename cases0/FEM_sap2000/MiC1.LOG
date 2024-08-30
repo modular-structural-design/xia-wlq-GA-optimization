@@ -1,0 +1,184 @@
+
+
+ SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)
+ File: D:\desktop\xia\modular-structural-team\cases0\FEM_sap2000\MiC1.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2024/08/30  15:18:59
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         840
+    WITH RESTRAINTS                        =         140
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1260
+ NUMBER OF SHELL ELEMENTS                  =         630
+ NUMBER OF LINK/SUPPORT ELEMENTS           =         844
+ NUMBER OF LOAD PATTERNS                   =           5
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           6
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      63.818 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+  (Env. variable SAPFIRE_NUM_THREADS not set)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =          12
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =          12
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =          12
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =          12
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =          12
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =          12
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =          12
+
+
+ E L E M E N T   F O R M A T I O N                                      15:18:59
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        15:18:59
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4200
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      109740
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ L I N E A R   S T A T I C   C A S E S                                  15:18:59
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF CASES TO SOLVE            =           5
+ NUMBER OF CASES TO SOLVE PER BLOCK        =           5
+
+ LINEAR STATIC CASES TO BE SOLVED:
+
+ CASE: DEAD
+ CASE: LIVE
+ CASE: EARTHQUAKE
+ CASE: EX
+ CASE: EY
+
+
+ E I G E N   M O D A L   A N A L Y S I S                                15:18:59
+
+ CASE: MODAL
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =        4200
+ NUMBER OF MASS DEGREES OF FREEDOM         =        2100
+ MAXIMUM NUMBER OF EIGEN MODES SOUGHT      =          12
+ MINIMUM NUMBER OF EIGEN MODES SOUGHT      =           1
+ NUMBER OF RESIDUAL-MASS MODES SOUGHT      =           0
+ NUMBER OF SUBSPACE VECTORS USED           =          24
+ RELATIVE CONVERGENCE TOLERANCE            =    1.00E-09
+
+ FREQUENCY SHIFT  (CENTER) (CYC/TIME)      =     .000000
+ FREQUENCY CUTOFF (RADIUS) (CYC/TIME)      =  -INFINITY-
+ ALLOW AUTOMATIC FREQUENCY SHIFTING        =         YES
+
+
+ Original stiffness at shift : EV= 0.0000000E+00, f=     .000000, T=  -INFINITY-
+ Number of eigenvalues below shift =      0
+ Found mode      1 of     12:  EV= 4.2096159E+02, f=    3.265437, T=    0.306238
+ Found mode      2 of     12:  EV= 4.9329052E+02, f=    3.534854, T=    0.282897
+ Found mode      3 of     12:  EV= 5.9936521E+02, f=    3.896421, T=    0.256646
+ Found mode      4 of     12:  EV= 6.9641874E+02, f=    4.200059, T=    0.238092
+ Found mode      5 of     12:  EV= 7.3931381E+02, f=    4.327475, T=    0.231082
+ Found mode      6 of     12:  EV= 8.6098514E+02, f=    4.670012, T=    0.214132
+ Found mode      7 of     12:  EV= 1.0210334E+03, f=    5.085575, T=    0.196635
+ Found mode      8 of     12:  EV= 1.0718340E+03, f=    5.210554, T=    0.191918
+ Found mode      9 of     12:  EV= 1.1704341E+03, f=    5.444946, T=    0.183657
+ Found mode     10 of     12:  EV= 1.3569087E+03, f=    5.862670, T=    0.170571
+ Found mode     11 of     12:  EV= 1.4695739E+03, f=    6.101208, T=    0.163902
+ Found mode     12 of     12:  EV= 1.5730071E+03, f=    6.312269, T=    0.158422
+
+ NUMBER OF EIGEN MODES FOUND               =          12
+ NUMBER OF ITERATIONS PERFORMED            =          11
+ NUMBER OF STIFFNESS SHIFTS                =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2024/08/30  15:19:00
+
+
+ SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)
+ File: D:\desktop\xia\modular-structural-team\cases0\FEM_sap2000\MiC1.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2024/08/30  15:19:03
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         840
+    WITH RESTRAINTS                        =         140
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1260
+ NUMBER OF SHELL ELEMENTS                  =         630
+ NUMBER OF LINK/SUPPORT ELEMENTS           =         844
+ NUMBER OF LOAD PATTERNS                   =           5
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           6
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      63.818 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+  (Env. variable SAPFIRE_NUM_THREADS not set)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =          12
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =          12
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =          12
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =          12
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =          12
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =          12
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =          12
+
+
+ E L E M E N T   F O R M A T I O N                                      15:19:03
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        15:19:03
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4200
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      109740
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ L I N E A R   S T A T I C   C A S E S                                  15:19:03
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF CASES TO SOLVE            =           2
+ NUMBER OF CASES TO SOLVE PER BLOCK        =           2
+
+ LINEAR STATIC CASES TO BE SOLVED:
+
+ CASE: EX
+ CASE: EY
+
+
+ A N A L Y S I S   C O M P L E T E                          2024/08/30  15:19:03
