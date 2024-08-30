@@ -135,7 +135,7 @@ def calute(File_Path,ModelPath,mySapObject, SapModel,pop2,mic_FEM_data,FEM_semat
             value_id.append(values_list[j])
     weight = values_list[-1]
     fit = weight + u * (sum(value_id))
-    return fit,weight
+    return fit
 
 
 def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
