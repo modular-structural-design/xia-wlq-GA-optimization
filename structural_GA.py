@@ -171,7 +171,7 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
         if run_time % 10 == 0:
             print(f'运行{run_time}次')
         if min_fitness <= calute(File_Path[0], ModelPath_name[0], mySapObject_name[0], SapModel_name[0], pop2[0],
-                                 mic_FEM_data, FEM_sematics, modular_num, FEA_info2, 1000):
+                                 mic_FEM_data, FEM_sematics, modular_num, FEA_info2, 10000):
             pop2[0] = min_chro
     ga_data = {}
 

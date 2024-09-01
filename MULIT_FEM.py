@@ -71,7 +71,7 @@ def mulitrun_GA_1(File_Path, ModelPath, mySapObject, SapModel, pop_all, q, mic_F
         FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path, SapModel, mySapObject, ModelPath)
 
         FC.output_index(modular_FEM, File_Path, File_Path, mic_FEM_data)
-        calaulate_fitness(File_Path, all_chro_data, 1000, time)
+        calaulate_fitness(File_Path, all_chro_data, 10000, time)
 
 
 def generate_chromosome(modular_num, section_info, pop_size):
