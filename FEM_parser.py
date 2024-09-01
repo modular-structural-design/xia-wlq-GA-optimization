@@ -11,7 +11,7 @@ import utils as ut
 with open('config.json', 'r') as f:
     analysis_data = json.load(f)
 
-sap_dirpath = analysis_data["file_paths"]["sap_dirpath"]  ####该地址、
+sap_dirpath = analysis_data["file_paths"]["sap_dirpath_xy"]  ####该地址、
 # analysis_model_path = os.path.join(os.getcwd(), "FEM_sap2000")
 
 

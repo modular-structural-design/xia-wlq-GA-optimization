@@ -1,49 +1,49 @@
 
 
  SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)
- File: D:\desktop\xia\modular-structural-team\cases0\FEM_sap2000\MiC1.LOG
+ File: F:\local test\xia-wlq-GA-optimization\cases0\FEM_sap2000\MiC1.LOG
 
 
 
 
- B E G I N   A N A L Y S I S                                2024/08/30  15:18:59
+ B E G I N   A N A L Y S I S                                2024/09/01  14:44:34
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
  USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
 
- NUMBER OF JOINTS                          =         840
-    WITH RESTRAINTS                        =         140
- NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1260
- NUMBER OF SHELL ELEMENTS                  =         630
- NUMBER OF LINK/SUPPORT ELEMENTS           =         844
+ NUMBER OF JOINTS                          =         912
+    WITH RESTRAINTS                        =         152
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1368
+ NUMBER OF SHELL ELEMENTS                  =         684
+ NUMBER OF LINK/SUPPORT ELEMENTS           =         880
  NUMBER OF LOAD PATTERNS                   =           5
  NUMBER OF ACCELERATION LOADS              =           9
  NUMBER OF LOAD CASES                      =           6
 
- ADDRESSABLE PHYSICAL MEMORY (RAM)         =      63.818 GB
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      31.939 GB
 
  PARALLELIZATION OF ANALYSIS OPERATIONS:
   (Env. variable SAPFIRE_NUM_THREADS not set)
- NUMBER OF THREADS: STATE (AUTOMATIC)      =          12
- NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =          12
- NUMBER OF THREADS: EVENT (AUTOMATIC)      =          12
- NUMBER OF THREADS: MOVE (AUTOMATIC)       =          12
- NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =          12
- NUMBER OF THREADS: SOLVE (AUTOMATIC)      =          12
- NUMBER OF THREADS: FORM (AUTOMATIC)       =          12
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           8
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           8
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           8
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           8
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           8
 
 
- E L E M E N T   F O R M A T I O N                                      15:18:59
+ E L E M E N T   F O R M A T I O N                                      14:44:34
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        15:18:59
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        14:44:34
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
- TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4200
- NUMBER OF NON-ZERO STIFFNESS TERMS        =      109740
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4560
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      118056
 
  ---------------------------------
  BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
@@ -55,7 +55,7 @@
  ---------------------------------
 
 
- L I N E A R   S T A T I C   C A S E S                                  15:18:59
+ L I N E A R   S T A T I C   C A S E S                                  14:44:34
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -71,14 +71,14 @@
  CASE: EY
 
 
- E I G E N   M O D A L   A N A L Y S I S                                15:18:59
+ E I G E N   M O D A L   A N A L Y S I S                                14:44:34
 
  CASE: MODAL
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
- NUMBER OF STIFFNESS DEGREES OF FREEDOM    =        4200
- NUMBER OF MASS DEGREES OF FREEDOM         =        2100
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =        4560
+ NUMBER OF MASS DEGREES OF FREEDOM         =        2280
  MAXIMUM NUMBER OF EIGEN MODES SOUGHT      =          12
  MINIMUM NUMBER OF EIGEN MODES SOUGHT      =           1
  NUMBER OF RESIDUAL-MASS MODES SOUGHT      =           0
@@ -92,71 +92,71 @@
 
  Original stiffness at shift : EV= 0.0000000E+00, f=     .000000, T=  -INFINITY-
  Number of eigenvalues below shift =      0
- Found mode      1 of     12:  EV= 4.2096159E+02, f=    3.265437, T=    0.306238
- Found mode      2 of     12:  EV= 4.9329052E+02, f=    3.534854, T=    0.282897
- Found mode      3 of     12:  EV= 5.9936521E+02, f=    3.896421, T=    0.256646
- Found mode      4 of     12:  EV= 6.9641874E+02, f=    4.200059, T=    0.238092
- Found mode      5 of     12:  EV= 7.3931381E+02, f=    4.327475, T=    0.231082
- Found mode      6 of     12:  EV= 8.6098514E+02, f=    4.670012, T=    0.214132
- Found mode      7 of     12:  EV= 1.0210334E+03, f=    5.085575, T=    0.196635
- Found mode      8 of     12:  EV= 1.0718340E+03, f=    5.210554, T=    0.191918
- Found mode      9 of     12:  EV= 1.1704341E+03, f=    5.444946, T=    0.183657
- Found mode     10 of     12:  EV= 1.3569087E+03, f=    5.862670, T=    0.170571
- Found mode     11 of     12:  EV= 1.4695739E+03, f=    6.101208, T=    0.163902
- Found mode     12 of     12:  EV= 1.5730071E+03, f=    6.312269, T=    0.158422
+ Found mode      1 of     12:  EV= 3.7666088E+02, f=    3.088840, T=    0.323746
+ Found mode      2 of     12:  EV= 4.2925487E+02, f=    3.297446, T=    0.303265
+ Found mode      3 of     12:  EV= 5.8299069E+02, f=    3.842828, T=    0.260225
+ Found mode      4 of     12:  EV= 6.3637537E+02, f=    4.014919, T=    0.249071
+ Found mode      5 of     12:  EV= 7.4486427E+02, f=    4.343689, T=    0.230219
+ Found mode      6 of     12:  EV= 8.2662881E+02, f=    4.575888, T=    0.218537
+ Found mode      7 of     12:  EV= 8.7009774E+02, f=    4.694660, T=    0.213008
+ Found mode      8 of     12:  EV= 8.9198450E+02, f=    4.753339, T=    0.210378
+ Found mode      9 of     12:  EV= 9.4361145E+02, f=    4.888963, T=    0.204542
+ Found mode     10 of     12:  EV= 1.0175688E+03, f=    5.076940, T=    0.196969
+ Found mode     11 of     12:  EV= 1.2189128E+03, f=    5.556566, T=    0.179967
+ Found mode     12 of     12:  EV= 1.2601421E+03, f=    5.649759, T=    0.176999
 
  NUMBER OF EIGEN MODES FOUND               =          12
- NUMBER OF ITERATIONS PERFORMED            =          11
+ NUMBER OF ITERATIONS PERFORMED            =          12
  NUMBER OF STIFFNESS SHIFTS                =           0
 
 
- A N A L Y S I S   C O M P L E T E                          2024/08/30  15:19:00
+ A N A L Y S I S   C O M P L E T E                          2024/09/01  14:44:34
 
 
  SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)
- File: D:\desktop\xia\modular-structural-team\cases0\FEM_sap2000\MiC1.LOG
+ File: F:\local test\xia-wlq-GA-optimization\cases0\FEM_sap2000\MiC1.LOG
 
 
 
 
- B E G I N   A N A L Y S I S                                2024/08/30  15:19:03
+ B E G I N   A N A L Y S I S                                2024/09/01  14:44:38
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
  USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
 
- NUMBER OF JOINTS                          =         840
-    WITH RESTRAINTS                        =         140
- NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1260
- NUMBER OF SHELL ELEMENTS                  =         630
- NUMBER OF LINK/SUPPORT ELEMENTS           =         844
+ NUMBER OF JOINTS                          =         912
+    WITH RESTRAINTS                        =         152
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        1368
+ NUMBER OF SHELL ELEMENTS                  =         684
+ NUMBER OF LINK/SUPPORT ELEMENTS           =         880
  NUMBER OF LOAD PATTERNS                   =           5
  NUMBER OF ACCELERATION LOADS              =           9
  NUMBER OF LOAD CASES                      =           6
 
- ADDRESSABLE PHYSICAL MEMORY (RAM)         =      63.818 GB
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      31.939 GB
 
  PARALLELIZATION OF ANALYSIS OPERATIONS:
   (Env. variable SAPFIRE_NUM_THREADS not set)
- NUMBER OF THREADS: STATE (AUTOMATIC)      =          12
- NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =          12
- NUMBER OF THREADS: EVENT (AUTOMATIC)      =          12
- NUMBER OF THREADS: MOVE (AUTOMATIC)       =          12
- NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =          12
- NUMBER OF THREADS: SOLVE (AUTOMATIC)      =          12
- NUMBER OF THREADS: FORM (AUTOMATIC)       =          12
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           8
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           8
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           8
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           8
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           8
 
 
- E L E M E N T   F O R M A T I O N                                      15:19:03
+ E L E M E N T   F O R M A T I O N                                      14:44:38
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        15:19:03
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        14:44:38
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
- TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4200
- NUMBER OF NON-ZERO STIFFNESS TERMS        =      109740
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        4560
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      118056
 
  ---------------------------------
  BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
@@ -168,7 +168,7 @@
  ---------------------------------
 
 
- L I N E A R   S T A T I C   C A S E S                                  15:19:03
+ L I N E A R   S T A T I C   C A S E S                                  14:44:38
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -181,4 +181,4 @@
  CASE: EY
 
 
- A N A L Y S I S   C O M P L E T E                          2024/08/30  15:19:03
+ A N A L Y S I S   C O M P L E T E                          2024/09/01  14:44:38

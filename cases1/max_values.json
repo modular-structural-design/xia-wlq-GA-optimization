@@ -1,39 +1,39 @@
 {
     "maximum_G11": {
-        "value": -0.2671028770585143,
+        "value": 0.501338810924401,
         "frames": [
-            "frame670"
+            "frame433"
         ]
     },
     "maximum_G12": {
-        "value": -0.17469597093848788,
+        "value": 0.6901626985473834,
         "frames": [
-            "frame670"
+            "frame435"
         ]
     },
     "maximum_G13": {
-        "value": -0.2802615875592209,
+        "value": -0.10103417603949105,
         "frames": [
-            "frame563"
+            "frame623"
         ]
     },
     "maximum_X_story_drift": {
-        "value": -0.955594176471484,
-        "node": "nodes839"
+        "value": -0.6571166591812403,
+        "node": "nodes453"
     },
     "maximum_Y_story_drift": {
-        "value": -0.7875514401277948,
-        "node": "nodes741"
+        "value": -0.7911582810315843,
+        "node": "nodes690"
     },
     "maximum_X_abs_story_drift": {
-        "value": -0.911961227719179,
-        "node": "nodes742"
+        "value": -0.42002922954529687,
+        "node": "nodes725"
     },
     "maximum_Y_abs_story_drift": {
-        "value": -0.8000417221563867,
-        "node": "nodes500"
+        "value": -0.6563379798358802,
+        "node": "nodes782"
     },
     "total_weight": {
-        "value": 446.54628287999645
+        "value": 422.5224192000002
     }
 }

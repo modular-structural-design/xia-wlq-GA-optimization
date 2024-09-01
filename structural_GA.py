@@ -11,9 +11,12 @@ import random
 import FEM_parser as FEA
 import gc
 import matplotlib
+
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-plt.rc('font',family='Times New Roman')
+
+plt.rc('font', family='Times New Roman')
+
 
 def draw_fitness(path):
     with open(path, 'r') as file:
@@ -24,9 +27,9 @@ def draw_fitness(path):
     fig2 = plt.figure(num=1, figsize=(23, 30))
     ax2 = fig2.add_subplot(111)
     ax2.tick_params(labelsize=40)
-    ax2.set_xlabel("Iteration",fontsize=50)  # 添加x轴坐标标签，后面看来没必要会删除它，这里只是为了演示一下。
+    ax2.set_xlabel("Iteration", fontsize=50)  # 添加x轴坐_标标签，后面看来没必要会删除它，这里只是为了演示一下。
     ax2.set_ylabel('Fitness', fontsize=50)  # 添加y轴标签，设置字体大小为16，这里也可以设字体样式与颜色
-    ax2.spines['bottom'].set_linewidth(3);###设置底部坐标轴的粗细
+    ax2.spines['bottom'].set_linewidth(3);  ###设置底部坐标轴的粗细
     ax2.spines['left'].set_linewidth(3)
     ax2.spines['right'].set_color('none')
     ax2.spines['top'].set_color('none')
@@ -45,8 +48,8 @@ def draw_fitness(path):
     ax2.tick_params(labelsize=30, which='major', length=10, width=1)
     ax2.tick_params(axis='both', direction='in')
     ax2.set(xlim=(0, 105), ylim=(0, 450),
-           xticks=np.arange(20, 105, 20),
-           yticks=np.arange(0, 450, 100))
+            xticks=np.arange(20, 105, 20),
+            yticks=np.arange(0, 450, 100))
     # plt.rcParams['xtick.direction'] = 'in'  # 将x周的刻度线方向设置向内
     # plt.rcParams['ytick.direction'] = 'in'  # 将y轴的刻度方向设置向内
     plt.show()
@@ -63,11 +66,9 @@ def select_2(pop, fitness):  # nature selection wrt pop's fitness
     # print(sort_num)
     # print(f'{len(sort_num)}_{len(pop)}')
     for i in range(len(sort_num)):
-        if sort_num[i]==0:
-            sort_num[i]+=0.01
+        if sort_num[i] == 0:
+            sort_num[i] += 0.01
     # pop_last.append(pop)
-
-
 
     # for i in range(len(list_new)):
     #     list_new[i] = m.e ** (list_new[i] * 1.5)
@@ -79,10 +80,10 @@ def select_2(pop, fitness):  # nature selection wrt pop's fitness
     return pop2
 
 
-def crossover_and_mutation(pop2,CROSSOVER_RATE,MUTATION_RATE,section_info):
+def crossover_and_mutation(pop2, CROSSOVER_RATE, MUTATION_RATE, section_info):
     pop = pop2
 
-    new_pop = np.zeros((len(pop),len(pop[0])))
+    new_pop = np.zeros((len(pop), len(pop[0])))
     for i in range(len(pop)):
         father = pop[i]
         child = father
@@ -90,28 +91,26 @@ def crossover_and_mutation(pop2,CROSSOVER_RATE,MUTATION_RATE,section_info):
             mother = pop[np.random.randint(len(pop2))]
             cross_points1 = np.random.randint(low=0, high=len(pop[0]))
             cross_points2 = np.random.randint(low=0, high=len(pop[0]))
-            while cross_points2==cross_points1:
+            while cross_points2 == cross_points1:
                 cross_points2 = np.random.randint(low=0, high=len(pop[0]))
             exchan = []
             exchan.append(cross_points2)
             exchan.append(cross_points1)
-            for j in range(min(exchan),max(exchan)):
+            for j in range(min(exchan), max(exchan)):
                 child[j] = mother[j]
-        mutation(child,MUTATION_RATE,section_info)
+        mutation(child, MUTATION_RATE, section_info)
         new_pop[i] = child
-
 
     return new_pop
 
-def mutation(child,MUTATION_RATE,section_info):
 
+def mutation(child, MUTATION_RATE, section_info):
     for i in range(len(child)):
         if np.random.rand() < MUTATION_RATE:
-            child[i] = random.randint(0,len(section_info)-1)
+            child[i] = random.randint(0, len(section_info) - 1)
 
 
-def calute(File_Path,ModelPath,mySapObject, SapModel,pop2,mic_FEM_data,FEM_sematics,modular_num,FEA_info2,u):
-
+def calute(File_Path, ModelPath, mySapObject, SapModel, pop2, mic_FEM_data, FEM_sematics, modular_num, FEA_info2, u):
     # 染色体解码
     merged_list = [pop2[i:i + 3] for i in range(0, len(pop2), 3)]
     modular_FEM = {}
@@ -120,9 +119,9 @@ def calute(File_Path,ModelPath,mySapObject, SapModel,pop2,mic_FEM_data,FEM_semat
     for i in range(0, modular_num):  # 假设你需要生成键 1 到 2
         modular_FEM[i + 1] = {"sections": merged_list[i]}
 
-    FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path,SapModel, mySapObject,ModelPath)
+    FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path, SapModel, mySapObject, ModelPath)
 
-    FC.output_index(modular_FEM, File_Path, File_Path,mic_FEM_data)
+    FC.output_index(modular_FEM, File_Path, File_Path, mic_FEM_data)
     with open(os.path.join(File_Path, 'max_values.json'), 'r') as file:
         index_data = json.load(file)
     value_dict = {key: item["value"] for key, item in index_data.items()}
@@ -169,7 +168,7 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
         pop2 = crossover_and_mutation(pop2, CROSSOVER_RATE, MUTATION_RATE, section_info)
         pop2.tolist()
         pop2 = [[int(num) for num in sublist] for sublist in pop2]
-        if run_time%10==0:
+        if run_time % 10 == 0:
             print(f'运行{run_time}次')
         if min_fitness <= calute(File_Path[0], ModelPath_name[0], mySapObject_name[0], SapModel_name[0], pop2[0],
                                  mic_FEM_data, FEM_sematics, modular_num, FEA_info2, 1000):
@@ -178,20 +177,19 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
 
     for i in range(len(all_min_fit)):
         ga_data[f'chro{i}'] = {
-            'code':all_min_pop[i],
-            'weight':all_min_weight[i],
-            'fitness':all_min_fit[i]
+            'code': all_min_pop[i],
+            'weight': all_min_weight[i],
+            'fitness': all_min_fit[i]
         }
     os.path.join(os.getcwd(), "FEM_sap2000")
     with open(os.path.join(os.getcwd(), f'Structural_GA_data\GA_data_case{case_number}.json'), 'w') as json_file:
         json.dump(ga_data, json_file, indent=4)
 
-
     for i in range(len(mySapObject_name)):
         ret = mySapObject_name[i].ApplicationExit(False)
         SapModel_name[i] = None
         mySapObject_name[i] = None
-    return all_min_fit,all_min_weight,all_min_pop
+    return all_min_fit, all_min_weight, all_min_pop
 
 
 # region Reading data
@@ -214,14 +212,14 @@ FEM_mic_data_ori = os.path.join(file_data["file_paths"]["FEMData"],
 FEM_mic_data_ref = os.path.join(file_data["file_paths"]["FEMData"],
                                 file_data["file_names"]["mic_structure_data2"])
 mic_FEM_data = os.path.join(file_data["file_paths"]["FEMData"],
-                                file_data["file_names"]["mic_FEM_data"])
+                            file_data["file_names"]["mic_FEM_data"])
 mic_results = os.path.join(file_data["file_paths"]["FEMData"],
-                                file_data["file_names"]["mic_results"])
+                           file_data["file_names"]["mic_results"])
 
 FEM_loading = os.path.join(file_data["file_paths"]["FEMData_prescribed"],
-                                file_data["file_names"]["FEA_loading"])
+                           file_data["file_names"]["FEA_loading"])
 FEM_sematics = os.path.join(file_data["file_paths"]["FEMData_prescribed"],
-                                file_data["file_names"]["FEA_semantics"])
+                            file_data["file_names"]["FEA_semantics"])
 SAP_path = file_data["file_paths"]["sap_dirpath"]
 
 if not os.path.exists(file_data["file_paths"]["FEMData"]):
@@ -231,8 +229,8 @@ if not os.path.exists(file_data["file_paths"]["FEMData"]):
 
 # region preprocess
 story_height = {"0": 3000, "1": 3000, "2": 3000}
-
-case_number = 1
+modular_type_case = 'case2' ###### 这个要改
+case_number = 5
 case_name = 'layout' + str(case_number) + '.json'
 with open(os.path.join(file_data["file_paths"]["Layout_Resulst"], case_name), 'r') as f:
     modular_plan = json.load(f)
@@ -240,7 +238,7 @@ modular_plan = {int(key): value for key, value in modular_plan.items()}
 
 with open(os.path.join(file_data["file_paths"]["BuildingData"], file_data["file_names"]["mic_types"]), 'r') as f:
     tp = json.load(f)
-modular_type = tp['case1']
+modular_type = tp[modular_type_case]
 modular_type = {int(key): value for key, value in modular_type.items()}
 
 # endregion
@@ -256,19 +254,17 @@ MiC_info2 = ut.modify_mic_geo(FEM_mic_data_ori, FEM_mic_data_ref, contraction=20
 nodes, edges, planes = ut.transform_mic_data2(MiC_info2)
 FEA_info2 = ut.implement_FEA_info_enrichment(FEM_mic_data_ref, FEM_loading, mic_FEM_data)
 
-modular_num = 2 #模块种类数
-num_thread = 10 #线程数
-pop_size = 20 #种群数量
-n_iteration = 100
+modular_num = len(modular_type)-1  # 模块种类数
+num_thread = 2  # 线程数
+pop_size = 6  # 种群数量
+n_iteration = 1
 CROSSOVER_RATE = 0.6
-MUTATION_RATE=0.15
-
+MUTATION_RATE = 0.15
 
 section_info = FC.extract_section_info()
 SapModel_name, mySapObject_name, ModelPath_name, File_Path = MF.mulit_sap(num_thread)
-all_min_fit,all_min_weight,all_min_pop=GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path)
+all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path)
 gc.collect()
-
 
 # path=os.path.join(os.getcwd(), f'Structural_GA_data\GA_data_case{1}.json')
 

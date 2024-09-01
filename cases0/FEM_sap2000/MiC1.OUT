@@ -1,7 +1,7 @@
 
 
  SAP2000 v23.3.0 Ultimate 64-bit (Analysis Build 9871/64)                       
- File: D:\desktop\xia\modular-structural-team\cases0\FEM_sap2000\MiC1.OUT       
+ File: F:\local test\xia-wlq-GA-optimization\cases0\FEM_sap2000\MiC1.OUT        
                                                                      
                                                                        
 
@@ -73,16 +73,22 @@
  odes216 TO odes219    -   -   -   -   -   -
  odes220 TO odes223    A   A   A   A   A   A
  odes224 TO odes227    -   -   -   -   -   -
- odes228 TO odes695    A   A   A   A   A   A
- odes696 TO odes699    -   -   -   -   -   -
- odes700 TO odes703    A   A   A   A   A   A
- odes704 TO odes707    -   -   -   -   -   -
- odes708 TO odes711    A   A   A   A   A   A
- odes712 TO odes715    -   -   -   -   -   -
- odes716 TO odes719    A   A   A   A   A   A
+ odes228 TO odes231    A   A   A   A   A   A
+ odes232 TO odes235    -   -   -   -   -   -
+ odes236 TO odes719    A   A   A   A   A   A
  odes720 TO odes723    -   -   -   -   -   -
  odes724 TO odes727    A   A   A   A   A   A
  odes728 TO odes731    -   -   -   -   -   -
  odes732 TO odes735    A   A   A   A   A   A
  odes736 TO odes739    -   -   -   -   -   -
- odes740 TO odes839    A   A   A   A   A   A
+ odes740 TO odes743    A   A   A   A   A   A
+ odes744 TO odes747    -   -   -   -   -   -
+ odes748 TO odes751    A   A   A   A   A   A
+ odes752 TO odes755    -   -   -   -   -   -
+ odes756 TO odes759    A   A   A   A   A   A
+ odes760 TO odes763    -   -   -   -   -   -
+ odes764 TO odes767    A   A   A   A   A   A
+ odes768 TO odes771    -   -   -   -   -   -
+ odes772 TO odes775    A   A   A   A   A   A
+ odes776 TO odes779    -   -   -   -   -   -
+ odes780 TO odes911    A   A   A   A   A   A
