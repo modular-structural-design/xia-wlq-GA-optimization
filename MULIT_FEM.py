@@ -34,7 +34,7 @@ def mulit_sap(num_thread):
 
 
 def thread_sap(File_Path, ModelPath, mySapObject_name, SapModel_name, num_thread, pop2, mic_FEM_data, FEM_sematics,
-               modular_num, FEA_info2, all_chro_data):
+               modular_num, FEA_info2, all_chro_data,sorted_elements):
     q = queue.Queue()
     threads = []
     for i in range(len(pop2)):
@@ -42,7 +42,7 @@ def thread_sap(File_Path, ModelPath, mySapObject_name, SapModel_name, num_thread
     for i in range(num_thread):
         t = threading.Thread(target=mulitrun_GA_1, args=(
         File_Path[i], ModelPath[i], mySapObject_name[i], SapModel_name[i], pop2, q, mic_FEM_data, FEM_sematics,
-        modular_num, FEA_info2, all_chro_data))
+        modular_num, FEA_info2, all_chro_data,sorted_elements))
         t.start()
         threads.append(t)
     for i in threads:
@@ -52,7 +52,7 @@ def thread_sap(File_Path, ModelPath, mySapObject_name, SapModel_name, num_thread
 
 
 def mulitrun_GA_1(File_Path, ModelPath, mySapObject, SapModel, pop_all, q, mic_FEM_data, FEM_sematics, modular_num,
-                  FEA_info2, all_chro_data):
+                  FEA_info2, all_chro_data,sorted_elements):
     while True:
         if q.empty():
             break
@@ -65,7 +65,7 @@ def mulitrun_GA_1(File_Path, ModelPath, mySapObject, SapModel, pop_all, q, mic_F
 
         # 用 for 循环生成字典
         for i in range(0, modular_num):  # 假设你需要生成键 1 到 2
-            modular_FEM[i + 1] = {"sections": merged_list[i]}
+            modular_FEM[f'{sorted_elements[i]}'] = {"sections": merged_list[i]}
 
 
         FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path, SapModel, mySapObject, ModelPath)

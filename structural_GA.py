@@ -137,7 +137,7 @@ def calute(File_Path, ModelPath, mySapObject, SapModel, pop2, mic_FEM_data, FEM_
     return fit
 
 
-def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
+def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements):
     all_min_fit = []
     all_min_weight = []
     all_min_pop = []
@@ -152,7 +152,7 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path):
 
         pop_data = MF.thread_sap(File_Path, ModelPath_name, mySapObject_name, SapModel_name, num_thread, pop2,
                                  mic_FEM_data,
-                                 FEM_sematics, modular_num, FEA_info2, pop_data)
+                                 FEM_sematics, modular_num, FEA_info2, pop_data,sorted_elements)
         fitness_dict = {key: item["fitness"] for key, item in pop_data.items()}
         fitness = list(fitness_dict.values())
 
@@ -230,11 +230,22 @@ if not os.path.exists(file_data["file_paths"]["FEMData"]):
 # region preprocess
 story_height = {"0": 3000, "1": 3000, "2": 3000}
 modular_type_case = 'case2' ###### 这个要改
-case_number = 5
+case_number = 3
 case_name = 'layout' + str(case_number) + '.json'
 with open(os.path.join(file_data["file_paths"]["Layout_Resulst"], case_name), 'r') as f:
     modular_plan = json.load(f)
 modular_plan = {int(key): value for key, value in modular_plan.items()}
+
+# 收集所有元素并去重
+all_elements = set()
+
+# 遍历每个键对应的列表
+for values in modular_plan.values():
+    all_elements.update(values)  # 将列表中的元素添加到集合中
+
+# 将集合转换为列表并排序
+sorted_elements = sorted(all_elements)
+
 
 with open(os.path.join(file_data["file_paths"]["BuildingData"], file_data["file_names"]["mic_types"]), 'r') as f:
     tp = json.load(f)
@@ -254,16 +265,23 @@ MiC_info2 = ut.modify_mic_geo(FEM_mic_data_ori, FEM_mic_data_ref, contraction=20
 nodes, edges, planes = ut.transform_mic_data2(MiC_info2)
 FEA_info2 = ut.implement_FEA_info_enrichment(FEM_mic_data_ref, FEM_loading, mic_FEM_data)
 
-modular_num = len(modular_type)-1  # 模块种类数
-num_thread = 2  # 线程数
+
+
+modular_num = len(sorted_elements)  # 模块种类数
+num_thread = 1  # 线程数
 pop_size = 6  # 种群数量
 n_iteration = 1
 CROSSOVER_RATE = 0.6
 MUTATION_RATE = 0.15
+modular_FEM = {
+    1: {"sections": [6, 8, 12]},
+    2: {"sections": [2, 7, 17]}
+}
 
 section_info = FC.extract_section_info()
 SapModel_name, mySapObject_name, ModelPath_name, File_Path = MF.mulit_sap(num_thread)
-all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path)
+# FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path[0],SapModel_name[0], mySapObject_name[0],ModelPath_name[0])
+all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements)
 gc.collect()
 
 # path=os.path.join(os.getcwd(), f'Structural_GA_data\GA_data_case{1}.json')
