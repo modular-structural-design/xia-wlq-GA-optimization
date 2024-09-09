@@ -273,10 +273,10 @@ pop_size = 6  # 种群数量
 n_iteration = 1
 CROSSOVER_RATE = 0.6
 MUTATION_RATE = 0.15
-modular_FEM = {
-    1: {"sections": [6, 8, 12]},
-    2: {"sections": [2, 7, 17]}
-}
+# modular_FEM = {
+#     1: {"sections": [6, 8, 12]},
+#     4: {"sections": [2, 7, 17]}
+# }
 
 section_info = FC.extract_section_info()
 SapModel_name, mySapObject_name, ModelPath_name, File_Path = MF.mulit_sap(num_thread)

@@ -65,7 +65,7 @@ def mulitrun_GA_1(File_Path, ModelPath, mySapObject, SapModel, pop_all, q, mic_F
 
         # 用 for 循环生成字典
         for i in range(0, modular_num):  # 假设你需要生成键 1 到 2
-            modular_FEM[f'{sorted_elements[i]}'] = {"sections": merged_list[i]}
+            modular_FEM[sorted_elements[i]] = {"sections": merged_list[i]}
 
 
         FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path, SapModel, mySapObject, ModelPath)
