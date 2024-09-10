@@ -113,14 +113,14 @@ def mutation(child, MUTATION_RATE, section_info):
             child[i] = random.randint(0, len(section_info) - 1)
 
 
-def calute(File_Path, ModelPath, mySapObject, SapModel, pop2, mic_FEM_data, FEM_sematics, modular_num, FEA_info2, u):
+def calute(File_Path, ModelPath, mySapObject, SapModel, pop2, mic_FEM_data, FEM_sematics, modular_num, FEA_info2, u, sorted_elements):
     # 染色体解码
     merged_list = [pop2[i:i + 3] for i in range(0, len(pop2), 3)]
     modular_FEM = {}
 
     # 用 for 循环生成字典
     for i in range(0, modular_num):  # 假设你需要生成键 1 到 2
-        modular_FEM[i + 1] = {"sections": merged_list[i]}
+        modular_FEM[sorted_elements[i]] = {"sections": merged_list[i]}
 
     FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path, SapModel, mySapObject, ModelPath)
 
@@ -174,7 +174,7 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sort
         if run_time % 10 == 0:
             print(f'运行{run_time}次')
         if min_fitness <= calute(File_Path[0], ModelPath_name[0], mySapObject_name[0], SapModel_name[0], pop2[0],
-                                 mic_FEM_data, FEM_sematics, modular_num, FEA_info2, 10000):
+                                 mic_FEM_data, FEM_sematics, modular_num, FEA_info2, 10000,sorted_elements):
             pop2[0] = min_chro
     ga_data = {}
 
@@ -328,20 +328,20 @@ FEA_info2 = ut.implement_FEA_info_enrichment(FEM_mic_data_ref, FEM_loading, mic_
 
 
 modular_num = len(sorted_elements)  # 模块种类数
-num_thread = 1  # 线程数
-pop_size = 6  # 种群数量
-n_iteration = 1
+num_thread = 10  # 线程数
+pop_size = 20  # 种群数量
+n_iteration = 100
 CROSSOVER_RATE = 0.6
 MUTATION_RATE = 0.15
-modular_FEM = {
-    1: {"sections": [6, 8, 12]},
-    4: {"sections": [2, 7, 17]}
-}
+# modular_FEM = {
+#     1: {"sections": [6, 8, 12]},
+#     4: {"sections": [2, 7, 17]}
+# }
 
 section_info = FC.extract_section_info()
 SapModel_name, mySapObject_name, ModelPath_name, File_Path = MF.mulit_sap(num_thread)
-FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path[0],SapModel_name[0], mySapObject_name[0],ModelPath_name[0])
-# all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements)
+# FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path[0],SapModel_name[0], mySapObject_name[0],ModelPath_name[0])
+all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements)
 gc.collect()
 
 # path=os.path.join(os.getcwd(), f'Structural_GA_data\GA_data_case{1}.json')
