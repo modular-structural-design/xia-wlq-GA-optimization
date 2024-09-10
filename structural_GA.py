@@ -11,9 +11,12 @@ import random
 import FEM_parser as FEA
 import gc
 import matplotlib
-
+import pyvista as pv
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+
 
 plt.rc('font', family='Times New Roman')
 
@@ -191,6 +194,60 @@ def GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sort
         mySapObject_name[i] = None
     return all_min_fit, all_min_weight, all_min_pop
 
+def draw_outsapce(out):
+    # 给定的字典数据
+    data = out
+
+    # 创建图形和坐标轴
+    fig, ax = plt.subplots()
+
+    # 遍历字典，绘制每个矩形
+    for key, points in data.items():
+        # 取出矩形的四个角点
+        rect_points = points
+
+        # 矩形左下角的坐标和宽高
+        x_min = min(p[0] for p in rect_points)  # 找到最小的 x 坐标
+        y_min = min(p[1] for p in rect_points)  # 找到最小的 y 坐标
+        width = max(p[0] for p in rect_points) - x_min  # 矩形的宽度
+        height = max(p[1] for p in rect_points) - y_min  # 矩形的高度
+
+        # 创建矩形对象
+        rect = patches.Rectangle((x_min, y_min), width, height, linewidth=1, edgecolor='r', facecolor='none')
+
+        # 将矩形添加到轴上
+        ax.add_patch(rect)
+
+    # 设置坐标轴范围
+    ax.set_xlim(0, 70000)
+    ax.set_ylim(0, 40000)
+    ax.set_aspect('equal')
+
+    # 显示图形
+    plt.show()
+def draw_point(point):
+    # 给定的字典数据，表示三维坐标
+    coordinates = point
+
+    # 提取坐标点并转换为 NumPy 数组
+    points = np.array(list(coordinates.values()))
+
+    # 创建 pyvista 的 PolyData 对象来存储点
+    point_cloud = pv.PolyData(points)
+
+    # 创建一个绘图对象
+    plotter = pv.Plotter()
+
+    # 添加点到绘图对象
+    plotter.add_mesh(point_cloud, color='blue', point_size=10, render_points_as_spheres=True)
+
+    # 设置绘图范围
+    plotter.set_background('white')
+    plotter.show_grid()
+
+    # 显示三维点图
+    plotter.show()
+
 
 # region Reading data
 with open('config.json', 'r') as f:
@@ -261,6 +318,9 @@ project_info = ut.output_structured_data(building_data, modular_plan, modular_ty
 MiC_info = ut.implement_modular_structure_data(FEM_basic_data, FEM_mic_data_ori)
 nodes, edges, planes = ut.transform_mic_data(MiC_info)
 
+# draw_point(MiC_info['spaces']['nodes'])
+
+
 MiC_info2 = ut.modify_mic_geo(FEM_mic_data_ori, FEM_mic_data_ref, contraction=200)
 nodes, edges, planes = ut.transform_mic_data2(MiC_info2)
 FEA_info2 = ut.implement_FEA_info_enrichment(FEM_mic_data_ref, FEM_loading, mic_FEM_data)
@@ -273,15 +333,15 @@ pop_size = 6  # 种群数量
 n_iteration = 1
 CROSSOVER_RATE = 0.6
 MUTATION_RATE = 0.15
-# modular_FEM = {
-#     1: {"sections": [6, 8, 12]},
-#     4: {"sections": [2, 7, 17]}
-# }
+modular_FEM = {
+    1: {"sections": [6, 8, 12]},
+    4: {"sections": [2, 7, 17]}
+}
 
 section_info = FC.extract_section_info()
 SapModel_name, mySapObject_name, ModelPath_name, File_Path = MF.mulit_sap(num_thread)
-# FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path[0],SapModel_name[0], mySapObject_name[0],ModelPath_name[0])
-all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements)
+FEA.parsing_to_sap2000_mulit(FEA_info2, FEM_sematics, modular_FEM, File_Path[0],SapModel_name[0], mySapObject_name[0],ModelPath_name[0])
+# all_min_fit, all_min_weight, all_min_pop = GA_structure(SapModel_name, mySapObject_name, ModelPath_name, File_Path,sorted_elements)
 gc.collect()
 
 # path=os.path.join(os.getcwd(), f'Structural_GA_data\GA_data_case{1}.json')

@@ -7,7 +7,7 @@ import json
 import os
 import copy
 import pandas as pd
-
+import pyvista as pv
 np.bool = np.bool_
 
 with open('config.json', 'r') as f:
